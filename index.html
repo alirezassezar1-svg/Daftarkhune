@@ -1,0 +1,3828 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دفتر اسناد رسمی — بندر امام خمینی، خوزستان</title>
+<meta name="description" content="وب‌سایت رسمی دفتر اسناد رسمی در بندر امام خمینی، خوزستان. راهنمای خدمات، مدارک مورد نیاز، آماده‌سازی پیش از مراجعه و مرکز دانش.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --navy:#101D30;
+  --navy-2:#182A44;
+  --navy-3:#0B1523;
+  --ivory:#F4F0E7;
+  --ivory-2:#EAE4D7;
+  --gold:#B69A62;
+  --gold-2:#9C824C;
+  --white:#FFFFFF;
+  --slate:#5A6472;
+  --slate-2:#8A93A0;
+  --line:rgba(16,29,48,.12);
+  --line-ivory:rgba(244,240,231,.16);
+  --shadow-sm:0 1px 2px rgba(16,29,48,.05),0 2px 8px rgba(16,29,48,.04);
+  --shadow-md:0 4px 12px rgba(16,29,48,.07),0 16px 40px rgba(16,29,48,.06);
+  --shadow-lg:0 24px 70px rgba(16,29,48,.14);
+  --ff-fa:'Vazirmatn',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ff-en:'Cormorant Garamond',Georgia,serif;
+  --maxw:1280px;
+  --gut:clamp(20px,4vw,64px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--ff-fa);background:var(--ivory);color:var(--navy);
+  font-size:16px;line-height:1.85;font-weight:400;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:inherit}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,h5{margin:0;font-weight:700;line-height:1.4;letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--gold);color:var(--navy-3)}
+
+/* ============ CONFIG PLACEHOLDER ============ */
+.cfg{
+  display:inline-block;padding:0 .35em;border-bottom:1px dotted var(--gold);
+  color:var(--gold-2);font-weight:500;background:rgba(182,154,98,.07);
+  border-radius:2px;font-size:.94em;
+}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut)}
+.wrap-narrow{max-width:880px;margin:0 auto;padding-inline:var(--gut)}
+.section{padding:clamp(56px,8vw,120px) 0}
+.section-tight{padding:clamp(40px,5vw,72px) 0}
+
+/* ============ SKIP LINK ============ */
+.skip{position:absolute;top:-100px;right:16px;z-index:9999;background:var(--navy);color:var(--ivory);padding:12px 20px;border-radius:6px;font-weight:600;transition:top .2s}
+.skip:focus{top:16px}
+
+/* ============ TOP BAR ============ */
+.topbar{
+  background:var(--navy-3);color:rgba(244,240,231,.78);
+  font-size:12.5px;letter-spacing:.01em;border-bottom:1px solid rgba(182,154,98,.18);
+  position:relative;z-index:60;
+}
+.topbar-inner{display:flex;align-items:center;gap:24px;min-height:42px;flex-wrap:wrap}
+.topbar-group{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.topbar-item{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.topbar-item svg{width:13px;height:13px;flex:none;opacity:.7}
+.topbar-sep{width:1px;height:14px;background:rgba(244,240,231,.18)}
+.topbar-announce{
+  display:flex;align-items:center;gap:9px;flex:1;min-width:0;
+  color:var(--gold);font-weight:500;
+}
+.topbar-announce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;box-shadow:0 0 0 3px rgba(182,154,98,.18)}
+.topbar-announce span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.topbar-actions{display:flex;align-items:center;gap:10px;margin-inline-start:auto}
+.lang-toggle{display:flex;border:1px solid rgba(244,240,231,.2);border-radius:4px;overflow:hidden}
+.lang-toggle button{padding:3px 9px;font-size:11px;color:rgba(244,240,231,.6);transition:.2s;font-family:var(--ff-en);letter-spacing:.04em}
+.lang-toggle button[aria-pressed="true"]{background:rgba(182,154,98,.2);color:var(--gold)}
+.lang-toggle button:hover{color:var(--gold)}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:55;background:rgba(244,240,231,.92);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .35s var(--ease),background .35s var(--ease);
+}
+.site-header.scrolled{box-shadow:0 1px 0 rgba(16,29,48,.06),0 12px 34px -18px rgba(16,29,48,.22);background:rgba(244,240,231,.97)}
+.header-inner{display:flex;align-items:center;gap:28px;min-height:76px}
+
+/* Brand */
+.brand{display:flex;align-items:center;gap:13px;flex:none;padding:6px 0}
+.brand-mark{width:38px;height:38px;color:var(--navy);flex:none;transition:transform .5s var(--ease-out)}
+.brand:hover .brand-mark{transform:rotate(-4deg) scale(1.04)}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-title{font-size:15.5px;font-weight:700;letter-spacing:-.01em}
+.brand-sub{font-family:var(--ff-en);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:500}
+
+/* Nav */
+.main-nav{display:flex;align-items:center;gap:2px;flex:1}
+.nav-link{
+  position:relative;padding:10px 14px;font-size:14.5px;font-weight:500;color:var(--navy);
+  border-radius:6px;transition:color .22s,background .22s;display:inline-flex;align-items:center;gap:6px;
+  white-space:nowrap;
+}
+.nav-link:hover{color:var(--gold-2)}
+.nav-link[aria-expanded="true"]{color:var(--gold-2);background:rgba(182,154,98,.08)}
+.nav-link .chev{width:9px;height:9px;opacity:.55;transition:transform .3s var(--ease)}
+.nav-link[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.nav-link.active{color:var(--navy);font-weight:700}
+.nav-link.active::after{
+  content:"";position:absolute;bottom:-1px;right:14px;left:14px;height:2px;background:var(--gold);border-radius:2px;
+  animation:navIn .4s var(--ease-out);
+}
+@keyframes navIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.header-actions{display:flex;align-items:center;gap:10px;flex:none;margin-inline-start:auto}
+.icon-btn{
+  width:40px;height:40px;display:grid;place-items:center;border-radius:8px;
+  color:var(--navy);transition:background .2s,color .2s;position:relative;
+}
+.icon-btn:hover{background:rgba(16,29,48,.06);color:var(--gold-2)}
+.icon-btn svg{width:18px;height:18px}
+.btn-cta{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:8px;
+  background:var(--navy);color:var(--ivory);font-size:14px;font-weight:600;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;
+  box-shadow:0 2px 8px rgba(16,29,48,.18);white-space:nowrap;
+}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,29,48,.28);background:var(--navy-2)}
+.btn-cta svg{width:15px;height:15px}
+.menu-btn{display:none}
+
+/* ============ MEGA MENU ============ */
+.mega{
+  position:absolute;top:100%;right:0;left:0;background:var(--white);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 30px 60px -20px rgba(16,29,48,.2);
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .28s var(--ease),transform .32s var(--ease-out),visibility .28s;
+  z-index:54;
+}
+.mega.open{opacity:1;visibility:visible;transform:translateY(0)}
+.mega-inner{display:grid;grid-template-columns:280px 1fr;gap:0;min-height:0}
+.mega-aside{
+  background:var(--navy);color:var(--ivory);padding:36px 32px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:28px;
+  position:relative;overflow:hidden;
+}
+.mega-aside::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 80% 20%,rgba(182,154,98,.22),transparent 55%);
+  pointer-events:none;
+}
+.mega-aside h4{font-size:19px;color:var(--white);position:relative;line-height:1.5}
+.mega-aside p{font-size:13.5px;color:rgba(244,240,231,.66);line-height:1.85;position:relative;margin-top:8px}
+.mega-aside .aside-link{
+  display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--gold);
+  position:relative;transition:gap .25s var(--ease);
+}
+.mega-aside .aside-link:hover{gap:12px}
+.mega-aside .aside-link svg{width:14px;height:14px;transform:scaleX(-1)}
+.mega-links{padding:32px 36px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px 34px}
+.mega-item{
+  display:flex;flex-direction:column;gap:3px;padding:11px 12px;border-radius:8px;
+  transition:background .2s,transform .25s var(--ease);border:1px solid transparent;
+}
+.mega-item:hover{background:var(--ivory);border-color:var(--line);transform:translateX(-3px)}
+.mega-item .mi-title{font-size:14px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px}
+.mega-item .mi-title::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold);flex:none;opacity:0;transition:opacity .2s}
+.mega-item:hover .mi-title::before{opacity:1}
+.mega-item .mi-desc{font-size:12.5px;color:var(--slate);line-height:1.7}
+
+/* ============ MOBILE DRAWER ============ */
+.drawer{
+  position:fixed;inset:0;z-index:200;background:var(--navy);color:var(--ivory);
+  display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .45s var(--ease-out);
+  visibility:hidden;
+}
+.drawer.open{transform:translateX(0);visibility:visible}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:18px var(--gut);border-bottom:1px solid var(--line-ivory);flex:none}
+.drawer-body{flex:1;overflow-y:auto;padding:24px var(--gut) 60px;-webkit-overflow-scrolling:touch}
+.drawer-group{border-bottom:1px solid var(--line-ivory)}
+.drawer-toggle{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;font-size:17px;font-weight:600;color:var(--ivory);text-align:right;
+}
+.drawer-toggle svg{width:14px;height:14px;transition:transform .3s var(--ease);color:var(--gold)}
+.drawer-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.drawer-panel{max-height:0;overflow:hidden;transition:max-height .38s var(--ease)}
+.drawer-panel a{display:block;padding:11px 14px;font-size:14.5px;color:rgba(244,240,231,.72);border-right:2px solid rgba(182,154,98,.3);margin-bottom:2px;border-radius:0 6px 6px 0;transition:.2s}
+.drawer-panel a:hover,.drawer-panel a.active{color:var(--gold);background:rgba(182,154,98,.08)}
+.drawer-single{display:block;padding:18px 0;font-size:17px;font-weight:600;border-bottom:1px solid var(--line-ivory);color:var(--ivory)}
+.drawer-single.active{color:var(--gold)}
+.drawer-foot{padding:26px 0 0;display:flex;flex-direction:column;gap:12px}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 30px;border-radius:8px;font-size:15px;font-weight:600;
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .28s,color .28s,border-color .28s;
+  border:1px solid transparent;cursor:pointer;text-align:center;
+}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--navy);color:var(--ivory);box-shadow:0 4px 16px rgba(16,29,48,.2)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(16,29,48,.3);background:var(--navy-2)}
+.btn-gold{background:var(--gold);color:var(--navy-3);box-shadow:0 4px 16px rgba(182,154,98,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(182,154,98,.42);background:#C4A96F}
+.btn-outline{border-color:rgba(16,29,48,.22);color:var(--navy)}
+.btn-outline:hover{border-color:var(--navy);background:rgba(16,29,48,.04);transform:translateY(-2px)}
+.btn-ghost-ivory{border-color:rgba(244,240,231,.3);color:var(--ivory)}
+.btn-ghost-ivory:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-sm{padding:10px 20px;font-size:13.5px}
+
+/* ============ TYPOGRAPHY HELPERS ============ */
+.eyebrow{
+  font-family:var(--ff-en);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold-2);font-weight:600;display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+.eyebrow.center::after{content:"";width:26px;height:1px;background:var(--gold)}
+.h-display{font-size:clamp(32px,5.2vw,62px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
+.h1{font-size:clamp(28px,4vw,44px);line-height:1.3;font-weight:800}
+.h2{font-size:clamp(24px,3.2vw,36px);line-height:1.35;font-weight:700}
+.h3{font-size:clamp(19px,2.1vw,24px);line-height:1.5;font-weight:700}
+.lead{font-size:clamp(16px,1.4vw,18.5px);line-height:2;color:var(--slate)}
+.muted{color:var(--slate);font-size:15px;line-height:1.95}
+.hairline{height:1px;background:var(--line);border:none;margin:0}
+
+/* ============ HERO ============ */
+.hero{position:relative;background:var(--ivory);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:clamp(560px,78vh,760px);align-items:stretch}
+.hero-content{
+  padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px) clamp(48px,7vw,96px) clamp(24px,4vw,48px);
+  display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;
+}
+.hero-content .eyebrow{margin-bottom:22px}
+.hero h1{margin-bottom:24px;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--gold-2);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;right:0;left:0;bottom:.08em;height:.32em;background:rgba(182,154,98,.14);z-index:-1}
+.hero-sub{max-width:52ch;margin-bottom:36px;font-size:clamp(15.5px,1.35vw,17.5px);line-height:2.05;color:var(--slate)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-meta{
+  margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:600px;
+}
+.hero-meta-item .hm-num{font-family:var(--ff-en);font-size:24px;font-weight:600;color:var(--gold-2);line-height:1.1;letter-spacing:-.01em}
+.hero-meta-item .hm-lbl{font-size:12.5px;color:var(--slate);margin-top:4px;line-height:1.6}
+
+.hero-visual{position:relative;background:var(--navy);overflow:hidden;min-height:340px}
+.hero-visual svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(11,21,35,.55));
+  pointer-events:none;
+}
+.hero-caption{
+  position:absolute;bottom:26px;right:26px;left:26px;z-index:3;color:rgba(244,240,231,.8);
+  font-size:12px;letter-spacing:.06em;display:flex;align-items:center;gap:10px;
+}
+.hero-caption::before{content:"";width:24px;height:1px;background:var(--gold)}
+
+.scroll-cue{
+  position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;
+  display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--slate);
+  font-size:10.5px;letter-spacing:.2em;font-family:var(--ff-en);text-transform:uppercase;
+}
+.scroll-cue .line{width:1px;height:38px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============ EDITORIAL SPLIT ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,88px);align-items:center}
+.split.reverse .split-visual{order:-1}
+.split-visual{position:relative}
+.split-visual .frame{
+  position:relative;border-radius:4px;overflow:hidden;background:var(--navy);
+  aspect-ratio:4/5;box-shadow:var(--shadow-lg);
+}
+.split-visual .frame svg{position:absolute;inset:0;width:100%;height:100%}
+.split-visual .accent{
+  position:absolute;bottom:-18px;right:-18px;width:120px;height:120px;
+  border:1px solid var(--gold);border-radius:4px;z-index:-1;opacity:.5;
+}
+.split-visual .badge{
+  position:absolute;top:22px;right:22px;background:rgba(244,240,231,.95);
+  padding:9px 16px;border-radius:4px;font-size:11.5px;font-weight:600;letter-spacing:.08em;
+  color:var(--navy);backdrop-filter:blur(8px);
+}
+.split-body .eyebrow{margin-bottom:18px}
+.split-body h2{margin-bottom:22px;max-width:20ch}
+.split-body p+p{margin-top:16px}
+.split-list{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+.split-list li{
+  display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);align-items:flex-start;
+}
+.split-list li:last-child{border-bottom:1px solid var(--line)}
+.split-list .num{
+  font-family:var(--ff-en);font-size:13px;font-weight:600;color:var(--gold-2);
+  flex:none;width:26px;padding-top:2px;
+}
+.split-list .txt{font-size:14.5px;line-height:1.85;color:var(--slate)}
+.split-list .txt strong{color:var(--navy);font-weight:600;display:block;margin-bottom:2px;font-size:15px}
+
+/* ============ SECTION HEADER ============ */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(32px,5vw,56px);flex-wrap:wrap}
+.sec-head .sh-left{max-width:640px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{margin-bottom:14px}
+.sec-head p{color:var(--slate);font-size:15.5px;line-height:1.95;max-width:56ch}
+.sec-head .sh-link{
+  display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--navy);
+  padding-bottom:4px;border-bottom:1px solid var(--gold);transition:gap .25s var(--ease),color .25s;
+}
+.sec-head .sh-link:hover{gap:14px;color:var(--gold-2)}
+.sec-head .sh-link svg{width:14px;height:14px;transform:scaleX(-1)}
+
+/* ============ SERVICE GRID ============ */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.svc-card{
+  position:relative;padding:clamp(26px,3vw,40px);border-left:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;gap:14px;transition:background .35s var(--ease);overflow:hidden;
+  min-height:270px;
+}
+.svc-card::before{
+  content:"";position:absolute;top:0;right:0;left:0;height:2px;background:var(--gold);
+  transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease-out);
+}
+.svc-card:hover{background:var(--white)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card .svc-idx{font-family:var(--ff-en);font-size:12px;color:var(--slate-2);letter-spacing:.14em;font-weight:600}
+.svc-card .svc-icon{width:34px;height:34px;color:var(--gold-2);margin-bottom:2px}
+.svc-card h3{font-size:18px;font-weight:700;line-height:1.55}
+.svc-card p{font-size:13.8px;line-height:1.9;color:var(--slate);flex:1}
+.svc-card .svc-more{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);
+  margin-top:6px;transition:gap .25s var(--ease),color .25s;
+}
+.svc-card:hover .svc-more{gap:13px;color:var(--gold-2)}
+.svc-card .svc-more svg{width:13px;height:13px;transform:scaleX(-1)}
+.svc-card.feature{
+  grid-column:span 2;background:var(--navy);color:var(--ivory);
+  flex-direction:row;align-items:center;gap:32px;min-height:auto;
+}
+.svc-card.feature h3{color:var(--white);font-size:21px}
+.svc-card.feature p{color:rgba(244,240,231,.68)}
+.svc-card.feature .svc-icon{color:var(--gold);flex:none;margin:0;width:44px;height:44px}
+.svc-card.feature .svc-more{color:var(--gold);margin:0;flex:none}
+.svc-card.feature .svc-idx{color:rgba(182,154,98,.6);position:absolute;top:26px;left:30px}
+.svc-card.feature .fc-body{flex:1}
+.svc-card.feature:hover{background:var(--navy-2)}
+.svc-card.feature::before{display:none}
+
+/* ============ BEFORE VISIT ============ */
+.before-visit{background:var(--navy);color:var(--ivory);position:relative;overflow:hidden}
+.before-visit::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 85% 10%,rgba(182,154,98,.14),transparent 60%),
+             radial-gradient(ellipse 50% 60% at 10% 100%,rgba(182,154,98,.08),transparent 60%);
+  pointer-events:none;
+}
+.before-visit .sec-head h2{color:var(--white)}
+.before-visit .sec-head p{color:rgba(244,240,231,.65)}
+.before-visit .eyebrow{color:var(--gold)}
+.before-visit .eyebrow::before{background:var(--gold)}
+.bv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line-ivory);position:relative}
+.bv-item{
+  padding:32px 24px 32px 0;border-left:1px solid var(--line-ivory);position:relative;
+  transition:background .3s var(--ease);
+}
+.bv-item:last-child{border-left:none}
+.bv-item:hover{background:rgba(182,154,98,.05)}
+.bv-num{
+  font-family:var(--ff-en);font-size:32px;font-weight:500;color:rgba(182,154,98,.45);
+  line-height:1;margin-bottom:16px;letter-spacing:-.02em;
+}
+.bv-item h4{font-size:15.5px;font-weight:600;color:var(--ivory);margin-bottom:10px;line-height:1.6}
+.bv-item p{font-size:13.2px;line-height:1.85;color:rgba(244,240,231,.6)}
+.bv-note{
+  margin-top:36px;padding:18px 22px;border-right:2px solid var(--gold);
+  background:rgba(182,154,98,.07);border-radius:0 8px 8px 0;font-size:13.8px;
+  color:rgba(244,240,231,.78);line-height:1.9;display:flex;gap:14px;align-items:flex-start;
+}
+.bv-note svg{width:18px;height:18px;color:var(--gold);flex:none;margin-top:3px}
+
+/* ============ KNOWLEDGE ============ */
+.knowledge{background:var(--ivory-2)}
+.kn-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:0;border:1px solid var(--line);background:var(--white);border-radius:4px;overflow:hidden}
+.kn-feature{position:relative;padding:clamp(28px,3.5vw,48px);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:18px;background:var(--white)}
+.kn-feature .kf-visual{
+  aspect-ratio:16/9;border-radius:3px;overflow:hidden;background:var(--navy);position:relative;margin-bottom:6px;
+}
+.kn-feature .kf-visual svg{position:absolute;inset:0;width:100%;height:100%}
+.kn-tag{
+  display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;
+  color:var(--gold-2);text-transform:none;
+}
+.kn-tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none}
+.kn-feature h3{font-size:clamp(20px,2.2vw,26px);line-height:1.5;font-weight:700}
+.kn-feature h3 a{transition:color .25s}
+.kn-feature h3 a:hover{color:var(--gold-2)}
+.kn-feature p{font-size:14.5px;line-height:1.95;color:var(--slate)}
+.kn-meta{display:flex;align-items:center;gap:16px;font-size:12.5px;color:var(--slate-2);flex-wrap:wrap}
+.kn-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--slate-2);opacity:.6}
+
+.kn-list{display:flex;flex-direction:column}
+.kn-item{
+  padding:22px clamp(20px,2.5vw,32px);border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;gap:8px;transition:background .25s;position:relative;
+}
+.kn-item:last-child{border-bottom:none}
+.kn-item:hover{background:var(--ivory)}
+.kn-item h4{font-size:15.5px;font-weight:600;line-height:1.6}
+.kn-item h4 a{transition:color .2s}
+.kn-item:hover h4 a{color:var(--gold-2)}
+.kn-item p{font-size:13.2px;line-height:1.8;color:var(--slate)}
+.kn-item .kn-meta{margin-top:2px;font-size:12px}
+
+/* ============ TRUST ============ */
+.trust{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust-item{
+  padding:clamp(28px,3.5vw,48px) clamp(20px,2.5vw,36px);border-left:1px solid var(--line);
+  display:flex;flex-direction:column;gap:14px;
+}
+.trust-item:last-child{border-left:none}
+.trust-icon{width:30px;height:30px;color:var(--gold-2)}
+.trust-item h4{font-size:16px;font-weight:700;line-height:1.55}
+.trust-item p{font-size:13.5px;line-height:1.9;color:var(--slate)}
+
+/* ============ FAQ ============ */
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  width:100%;display:flex;align-items:flex-start;gap:20px;padding:26px 0;text-align:right;
+  font-size:clamp(15px,1.5vw,17px);font-weight:600;line-height:1.7;color:var(--navy);
+  transition:color .25s;
+}
+.faq-q:hover{color:var(--gold-2)}
+.faq-q .fq-idx{font-family:var(--ff-en);font-size:12px;color:var(--slate-2);flex:none;padding-top:5px;letter-spacing:.1em;font-weight:500}
+.faq-q .fq-txt{flex:1}
+.faq-q .fq-icon{
+  width:26px;height:26px;border-radius:50%;border:1px solid var(--line);flex:none;
+  display:grid;place-items:center;transition:all .3s var(--ease);margin-top:2px;
+}
+.faq-q .fq-icon svg{width:12px;height:12px;transition:transform .35s var(--ease)}
+.faq-q[aria-expanded="true"] .fq-icon{background:var(--navy);border-color:var(--navy);color:var(--ivory)}
+.faq-q[aria-expanded="true"] .fq-icon svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .42s var(--ease)}
+.faq-a-inner{padding:0 0 30px 46px;max-width:72ch}
+.faq-a-inner p{font-size:14.5px;line-height:2;color:var(--slate)}
+.faq-a-inner p+p{margin-top:12px}
+.faq-a-inner a{color:var(--gold-2);border-bottom:1px solid rgba(182,154,98,.4);transition:.2s}
+.faq-a-inner a:hover{color:var(--navy);border-color:var(--navy)}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--ivory)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
+.contact-info{padding:clamp(32px,4vw,56px);display:flex;flex-direction:column;gap:26px}
+.contact-info h3{font-size:clamp(21px,2.3vw,27px);line-height:1.5}
+.contact-info>p{font-size:14.5px;line-height:1.95;color:var(--slate)}
+.contact-rows{display:flex;flex-direction:column;gap:0;margin-top:6px}
+.contact-row{
+  display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);align-items:flex-start;
+}
+.contact-row .cr-icon{width:18px;height:18px;color:var(--gold-2);flex:none;margin-top:5px}
+.contact-row .cr-body{flex:1}
+.contact-row .cr-label{font-size:11.5px;letter-spacing:.1em;color:var(--slate-2);font-weight:600;text-transform:uppercase;font-family:var(--ff-en)}
+.contact-row .cr-value{font-size:15px;font-weight:500;margin-top:3px;line-height:1.7;color:var(--navy)}
+.contact-row .cr-value a{border-bottom:1px solid rgba(182,154,98,.4);transition:.2s}
+.contact-row .cr-value a:hover{color:var(--gold-2);border-color:var(--gold-2)}
+
+.contact-map{
+  position:relative;background:var(--navy);min-height:420px;overflow:hidden;
+}
+.contact-map svg{position:absolute;inset:0;width:100%;height:100%}
+.contact-map .map-overlay{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(28px,3.5vw,48px);background:linear-gradient(180deg,transparent 40%,rgba(11,21,35,.85));
+  color:var(--ivory);z-index:2;
+}
+.contact-map .map-overlay .eyebrow{color:var(--gold);margin-bottom:12px}
+.contact-map .map-overlay h4{font-size:clamp(18px,2vw,23px);color:var(--white);margin-bottom:10px}
+.contact-map .map-overlay p{font-size:14px;color:rgba(244,240,231,.7);line-height:1.9;margin-bottom:20px;max-width:44ch}
+
+/* ============ FINAL CTA ============ */
+.final-cta{
+  background:var(--navy-3);color:var(--ivory);position:relative;overflow:hidden;
+  text-align:center;padding:clamp(64px,10vw,130px) 0;
+}
+.final-cta::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 70% at 50% 0%,rgba(182,154,98,.16),transparent 65%);
+}
+.final-cta::after{
+  content:"";position:absolute;top:0;right:50%;transform:translateX(50%);
+  width:1px;height:60px;background:linear-gradient(180deg,var(--gold),transparent);
+}
+.final-cta-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;padding-inline:var(--gut)}
+.final-cta h2{font-size:clamp(26px,3.8vw,44px);color:var(--white);line-height:1.35;margin-bottom:22px}
+.final-cta p{font-size:16px;color:rgba(244,240,231,.68);line-height:2;margin-bottom:38px;max-width:56ch;margin-inline:auto}
+.final-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--navy);color:rgba(244,240,231,.72);position:relative;overflow:hidden}
+.site-footer::before{
+  content:"";position:absolute;top:0;right:0;left:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5;
+}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:clamp(28px,3.5vw,52px);
+  padding:clamp(52px,6vw,84px) 0 clamp(40px,5vw,64px);
+}
+.footer-brand .brand{margin-bottom:22px}
+.footer-brand .brand-mark{color:var(--gold)}
+.footer-brand .brand-title{color:var(--white)}
+.footer-brand .brand-sub{color:var(--gold)}
+.footer-about{font-size:13.5px;line-height:2;color:rgba(244,240,231,.6);max-width:38ch}
+.footer-col h5{
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--ff-en);font-weight:600;margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:11px}
+.footer-col a{font-size:13.8px;color:rgba(244,240,231,.68);transition:color .2s,padding .25s var(--ease);display:inline-block}
+.footer-col a:hover{color:var(--gold);padding-inline-start:4px}
+.footer-contact-list{display:flex;flex-direction:column;gap:14px}
+.footer-contact-item{display:flex;gap:11px;font-size:13.5px;line-height:1.8}
+.footer-contact-item svg{width:15px;height:15px;color:var(--gold);flex:none;margin-top:4px}
+.footer-contact-item span{color:rgba(244,240,231,.7)}
+.footer-bottom{
+  border-top:1px solid var(--line-ivory);padding:28px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.footer-bottom-left{display:flex;flex-direction:column;gap:8px;max-width:640px}
+.footer-copy{font-size:12.5px;color:rgba(244,240,231,.5);font-family:var(--ff-fa)}
+.footer-disclaimer{font-size:11.8px;color:rgba(244,240,231,.42);line-height:1.85}
+.footer-legal{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.footer-legal a{font-size:12.5px;color:rgba(244,240,231,.55);transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+.footer-ornament{
+  height:52px;position:relative;overflow:hidden;border-top:1px solid var(--line-ivory);
+  background:linear-gradient(180deg,rgba(182,154,98,.05),transparent);
+}
+.footer-ornament svg{position:absolute;inset:0;width:100%;height:100%;opacity:.4}
+
+/* Back to top */
+.back-top{
+  position:fixed;bottom:26px;left:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--navy);color:var(--ivory);display:grid;place-items:center;z-index:80;
+  box-shadow:0 8px 28px rgba(16,29,48,.35);opacity:0;visibility:hidden;
+  transform:translateY(14px) scale(.9);transition:all .35s var(--ease-out);
+  border:1px solid rgba(182,154,98,.3);
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.back-top:hover{background:var(--gold);color:var(--navy-3);transform:translateY(-3px)}
+.back-top svg{width:17px;height:17px}
+
+/* ============ PAGE HEADER / BREADCRUMB ============ */
+.page-head{
+  background:var(--ivory-2);border-bottom:1px solid var(--line);
+  padding:clamp(36px,5vw,68px) 0 clamp(32px,4vw,52px);position:relative;overflow:hidden;
+}
+.page-head::before{
+  content:"";position:absolute;top:-40px;left:-40px;width:200px;height:200px;
+  border:1px solid rgba(182,154,98,.16);border-radius:50%;pointer-events:none;
+}
+.page-head::after{
+  content:"";position:absolute;top:-10px;left:10px;width:120px;height:120px;
+  border:1px solid rgba(182,154,98,.1);border-radius:50%;pointer-events:none;
+}
+.breadcrumb{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--slate);margin-bottom:20px;flex-wrap:wrap;position:relative;z-index:2}
+.breadcrumb a{transition:color .2s}
+.breadcrumb a:hover{color:var(--gold-2)}
+.breadcrumb svg{width:10px;height:10px;opacity:.5;transform:scaleX(-1)}
+.breadcrumb .cur{color:var(--navy);font-weight:600}
+.page-head h1{position:relative;z-index:2;max-width:24ch}
+.page-head .page-lead{margin-top:18px;max-width:68ch;font-size:16px;line-height:2;color:var(--slate);position:relative;z-index:2}
+
+/* ============ ARTICLE / PROSE ============ */
+.prose{max-width:760px}
+.prose h2{font-size:clamp(21px,2.4vw,28px);margin:44px 0 18px;line-height:1.45;position:relative;padding-top:22px}
+.prose h2::before{content:"";position:absolute;top:0;right:0;width:34px;height:2px;background:var(--gold)}
+.prose h3{font-size:clamp(17px,1.9vw,20px);margin:32px 0 14px;line-height:1.55}
+.prose p{font-size:15.5px;line-height:2.1;color:#3A4553;margin-bottom:18px}
+.prose p.lead{font-size:17.5px;color:var(--slate)}
+.prose ul,.prose ol{margin:18px 0 26px;display:flex;flex-direction:column;gap:11px}
+.prose ul li,.prose ol li{font-size:15px;line-height:1.95;color:#3A4553;padding-inline-start:26px;position:relative}
+.prose ul li::before{
+  content:"";position:absolute;right:0;top:12px;width:6px;height:6px;border:1.5px solid var(--gold);border-radius:50%;
+}
+.prose ol{counter-reset:ol}
+.prose ol li{counter-increment:ol}
+.prose ol li::before{
+  content:counter(ol);position:absolute;right:0;top:0;font-family:var(--ff-en);
+  font-size:13px;font-weight:600;color:var(--gold-2);width:18px;text-align:right;
+}
+.prose blockquote{
+  margin:28px 0;padding:22px 26px;border-right:3px solid var(--gold);
+  background:var(--ivory-2);border-radius:0 6px 6px 0;font-size:15.5px;line-height:2;color:var(--navy);
+}
+.prose blockquote p{margin:0;font-size:15.5px;color:var(--navy)}
+.prose .callout{
+  margin:28px 0;padding:20px 24px;border:1px solid var(--line);border-radius:6px;
+  background:var(--white);display:flex;gap:16px;align-items:flex-start;
+}
+.prose .callout svg{width:19px;height:19px;color:var(--gold-2);flex:none;margin-top:3px}
+.prose .callout p{margin:0;font-size:14.5px;line-height:1.95;color:var(--slate)}
+.prose .callout strong{color:var(--navy)}
+
+.article-head{padding:clamp(40px,6vw,80px) 0 0}
+.article-head .kn-meta{margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+
+.disclaimer-box{
+  margin:44px 0 0;padding:22px 26px;background:var(--ivory-2);border-radius:6px;
+  border:1px solid var(--line);display:flex;gap:16px;align-items:flex-start;
+}
+.disclaimer-box svg{width:19px;height:19px;color:var(--gold-2);flex:none;margin-top:3px}
+.disclaimer-box p{font-size:13.5px;line-height:1.95;color:var(--slate);margin:0}
+
+/* ============ SERVICE DETAIL ============ */
+.svc-detail-grid{display:grid;grid-template-columns:1fr 340px;gap:clamp(32px,5vw,72px);align-items:start}
+.svc-side{position:sticky;top:100px;display:flex;flex-direction:column;gap:22px}
+.svc-side-card{
+  padding:26px;border:1px solid var(--line);border-radius:6px;background:var(--white);
+  display:flex;flex-direction:column;gap:16px;
+}
+.svc-side-card.dark{background:var(--navy);color:var(--ivory);border-color:transparent}
+.svc-side-card.dark h4{color:var(--white)}
+.svc-side-card.dark p{color:rgba(244,240,231,.65)}
+.svc-side-card h4{font-size:15.5px;font-weight:700;line-height:1.55}
+.svc-side-card p{font-size:13.5px;line-height:1.9;color:var(--slate)}
+.svc-side-links{display:flex;flex-direction:column;gap:2px}
+.svc-side-links a{
+  padding:11px 0;font-size:14px;color:var(--navy);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:9px;transition:color .2s,padding .25s var(--ease);
+}
+.svc-side-links a:last-child{border-bottom:none}
+.svc-side-links a::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none;opacity:.5;transition:opacity .2s}
+.svc-side-links a:hover{color:var(--gold-2);padding-inline-start:5px}
+.svc-side-links a:hover::before{opacity:1}
+
+.steps-list{counter-reset:step;display:flex;flex-direction:column;gap:0;margin:26px 0}
+.step-item{
+  counter-increment:step;display:flex;gap:22px;padding:24px 0;border-top:1px solid var(--line);
+  align-items:flex-start;
+}
+.step-item:last-child{border-bottom:1px solid var(--line)}
+.step-item::before{
+  content:counter(step,decimal-leading-zero);font-family:var(--ff-en);font-size:15px;
+  font-weight:600;color:var(--gold-2);flex:none;width:38px;padding-top:2px;letter-spacing:.02em;
+}
+.step-item .st-body h4{font-size:15.5px;font-weight:600;margin-bottom:6px;line-height:1.6}
+.step-item .st-body p{font-size:14px;line-height:1.9;color:var(--slate)}
+
+.checklist{display:flex;flex-direction:column;gap:2px;margin:22px 0}
+.checklist li{
+  display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start;
+  font-size:14.5px;line-height:1.9;color:#3A4553;
+}
+.checklist li:first-child{border-top:1px solid var(--line)}
+.checklist .chk{
+  width:18px;height:18px;border:1.5px solid var(--gold);border-radius:4px;flex:none;margin-top:4px;
+  position:relative;transition:background .2s;
+}
+.checklist li:hover .chk{background:rgba(182,154,98,.15)}
+
+/* ============ SERVICES DIRECTORY ============ */
+.filter-bar{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:36px;
+  padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.filter-search{
+  flex:1;min-width:220px;position:relative;display:flex;align-items:center;
+}
+.filter-search svg{position:absolute;right:16px;width:16px;height:16px;color:var(--slate-2);pointer-events:none}
+.filter-search input{
+  width:100%;padding:13px 46px 13px 16px;border:1px solid var(--line);border-radius:8px;
+  background:var(--white);font-size:14.5px;color:var(--navy);transition:border-color .25s,box-shadow .25s;
+}
+.filter-search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(182,154,98,.12)}
+.filter-search input::placeholder{color:var(--slate-2)}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:9px 16px;border:1px solid var(--line);border-radius:100px;font-size:13px;
+  font-weight:500;color:var(--slate);transition:all .25s var(--ease);background:var(--white);
+}
+.chip:hover{border-color:var(--gold);color:var(--navy)}
+.chip.active{background:var(--navy);border-color:var(--navy);color:var(--ivory)}
+.empty-state{
+  padding:64px 32px;text-align:center;border:1px dashed var(--line);border-radius:8px;
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.empty-state svg{width:38px;height:38px;color:var(--slate-2);opacity:.6}
+.empty-state h4{font-size:17px;font-weight:600}
+.empty-state p{font-size:14px;color:var(--slate);max-width:44ch;line-height:1.9}
+
+/* ============ ANNOUNCEMENTS ============ */
+.ann-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.ann-item{
+  display:grid;grid-template-columns:150px 1fr auto;gap:32px;padding:30px 0;
+  border-bottom:1px solid var(--line);align-items:start;transition:background .25s;position:relative;
+}
+.ann-item:hover{background:rgba(255,255,255,.5)}
+.ann-date{display:flex;flex-direction:column;gap:5px}
+.ann-date .ad-day{font-family:var(--ff-en);font-size:26px;font-weight:500;color:var(--gold-2);line-height:1}
+.ann-date .ad-month{font-size:12.5px;color:var(--slate-2);letter-spacing:.04em}
+.ann-cat{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--gold-2);
+  margin-bottom:9px;
+}
+.ann-item h3{font-size:17.5px;font-weight:700;line-height:1.6;margin-bottom:9px}
+.ann-item h3 a{transition:color .2s}
+.ann-item:hover h3 a{color:var(--gold-2)}
+.ann-item p{font-size:14px;line-height:1.9;color:var(--slate);max-width:66ch}
+.ann-arrow{
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+  color:var(--navy);flex:none;transition:all .3s var(--ease);align-self:center;
+}
+.ann-item:hover .ann-arrow{background:var(--navy);border-color:var(--navy);color:var(--ivory);transform:scaleX(-1) translateX(3px)}
+.ann-arrow svg{width:14px;height:14px;transform:scaleX(-1)}
+.ann-featured{
+  background:var(--navy);color:var(--ivory);border-radius:8px;padding:clamp(32px,4vw,52px);
+  margin-bottom:44px;position:relative;overflow:hidden;
+}
+.ann-featured::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 90% 10%,rgba(182,154,98,.16),transparent 55%);
+}
+.ann-featured>*{position:relative;z-index:2}
+.ann-featured .ann-cat{color:var(--gold)}
+.ann-featured h2{font-size:clamp(21px,2.6vw,30px);color:var(--white);margin:14px 0 16px;line-height:1.5;max-width:24ch}
+.ann-featured p{font-size:15px;line-height:2;color:rgba(244,240,231,.7);max-width:64ch;margin-bottom:26px}
+
+/* ============ SEARCH ============ */
+.search-modal{
+  position:fixed;inset:0;z-index:300;background:rgba(11,21,35,.72);backdrop-filter:blur(8px);
+  display:flex;align-items:flex-start;justify-content:center;padding:clamp(60px,12vh,140px) 20px 40px;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;
+}
+.search-modal.open{opacity:1;visibility:visible}
+.search-panel{
+  width:100%;max-width:720px;background:var(--white);border-radius:12px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,.4);transform:translateY(-16px) scale(.98);
+  transition:transform .4s var(--ease-out);display:flex;flex-direction:column;max-height:80vh;
+}
+.search-modal.open .search-panel{transform:translateY(0) scale(1)}
+.search-input-wrap{
+  display:flex;align-items:center;gap:14px;padding:20px 24px;border-bottom:1px solid var(--line);flex:none;
+}
+.search-input-wrap svg{width:20px;height:20px;color:var(--slate-2);flex:none}
+.search-input-wrap input{
+  flex:1;border:none;outline:none;font-size:17px;color:var(--navy);background:transparent;
+}
+.search-input-wrap input::placeholder{color:var(--slate-2)}
+.search-input-wrap kbd{
+  font-family:var(--ff-en);font-size:11px;padding:4px 8px;border:1px solid var(--line);
+  border-radius:5px;color:var(--slate-2);background:var(--ivory);
+}
+.search-results{overflow-y:auto;padding:8px;flex:1}
+.sr-item{
+  display:flex;gap:16px;padding:14px 16px;border-radius:8px;transition:background .18s;align-items:flex-start;
+}
+.sr-item:hover,.sr-item.focused{background:var(--ivory)}
+.sr-type{
+  font-size:10.5px;font-weight:600;letter-spacing:.06em;color:var(--gold-2);
+  border:1px solid rgba(182,154,98,.35);border-radius:4px;padding:3px 8px;flex:none;margin-top:2px;
+  white-space:nowrap;
+}
+.sr-body h4{font-size:14.5px;font-weight:600;line-height:1.6;margin-bottom:3px}
+.sr-body p{font-size:12.8px;color:var(--slate);line-height:1.75;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sr-empty{padding:48px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.sr-empty svg{width:34px;height:34px;color:var(--slate-2);opacity:.5}
+.sr-empty h4{font-size:16px;font-weight:600}
+.sr-empty p{font-size:13.5px;color:var(--slate);max-width:40ch;line-height:1.85}
+.sr-hint{padding:14px 20px;font-size:11.5px;color:var(--slate-2);border-top:1px solid var(--line);display:flex;gap:16px;flex:none;flex-wrap:wrap}
+.sr-hint span{display:inline-flex;align-items:center;gap:6px}
+
+/* ============ 404 ============ */
+.nf-wrap{text-align:center;padding:clamp(64px,12vw,140px) 0;position:relative;overflow:hidden}
+.nf-wrap::before{
+  content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(560px,90vw);height:min(560px,90vw);border:1px solid rgba(182,154,98,.14);border-radius:50%;
+  pointer-events:none;
+}
+.nf-code{
+  font-family:var(--ff-en);font-size:clamp(80px,16vw,160px);font-weight:500;line-height:.9;
+  color:var(--navy);letter-spacing:-.04em;position:relative;
+}
+.nf-code span{color:var(--gold)}
+.nf-wrap h1{font-size:clamp(22px,3vw,34px);margin:24px 0 18px;position:relative}
+.nf-wrap p{font-size:15.5px;color:var(--slate);line-height:2;max-width:52ch;margin:0 auto 36px;position:relative}
+.nf-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.nf-suggestions{margin-top:64px;position:relative}
+.nf-suggestions h3{font-size:14px;letter-spacing:.06em;color:var(--slate-2);margin-bottom:22px;font-weight:600}
+.nf-sugg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:840px;margin:0 auto}
+.nf-sugg{
+  padding:20px;border:1px solid var(--line);border-radius:8px;background:var(--white);
+  text-align:right;transition:all .28s var(--ease);
+}
+.nf-sugg:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.nf-sugg h4{font-size:14.5px;font-weight:600;margin-bottom:5px}
+.nf-sugg p{font-size:12.5px;color:var(--slate);line-height:1.75}
+
+/* ============ QUICK LINKS / CROSS ============ */
+.cross-links{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);
+  border-right:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.cross-item{
+  padding:26px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;gap:9px;transition:background .25s;background:var(--white);
+}
+.cross-item:hover{background:var(--ivory)}
+.cross-item .ci-label{font-size:11px;letter-spacing:.1em;color:var(--gold-2);font-weight:600;font-family:var(--ff-en)}
+.cross-item h4{font-size:15.5px;font-weight:600;line-height:1.6}
+.cross-item p{font-size:13px;color:var(--slate);line-height:1.8}
+
+/* ============ ANIMATION ============ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.04s}
+.stagger.in>*:nth-child(2){transition-delay:.1s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.22s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.34s}
+
+#main{animation:pageIn .5s var(--ease-out)}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1100px){
+  .main-nav{display:none}
+  .menu-btn{display:grid}
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-visual{min-height:300px;order:-1}
+  .hero-content{padding-top:44px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-card.feature{grid-column:span 2}
+  .bv-grid{grid-template-columns:repeat(2,1fr)}
+  .bv-item{border-bottom:1px solid var(--line-ivory);padding:26px 20px 26px 0}
+  .bv-item:nth-child(odd){border-left:1px solid var(--line-ivory)}
+  .bv-item:nth-child(even){border-left:none;padding-right:24px}
+  .bv-item:last-child{border-bottom:none}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item{border-bottom:1px solid var(--line);padding:32px 24px}
+  .trust-item:nth-child(odd){border-left:1px solid var(--line)}
+  .trust-item:nth-child(even){border-left:none}
+  .trust-item:nth-last-child(-n+2){border-bottom:none}
+  .footer-top{grid-template-columns:1fr 1fr 1fr;gap:36px}
+  .footer-brand{grid-column:span 3}
+  .svc-detail-grid{grid-template-columns:1fr}
+  .svc-side{position:static}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-map{min-height:320px}
+  .kn-layout{grid-template-columns:1fr}
+  .kn-feature{border-left:none;border-bottom:1px solid var(--line)}
+  .mega-inner{grid-template-columns:1fr}
+  .mega-aside{display:none}
+  .mega-links{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:15px}
+  .topbar-inner{gap:12px;min-height:auto;padding:9px 0}
+  .topbar-group .hide-sm{display:none}
+  .topbar-announce{order:3;flex-basis:100%;font-size:11.5px}
+  .topbar-actions{margin-inline-start:auto}
+  .header-inner{min-height:64px;gap:14px}
+  .brand-mark{width:32px;height:32px}
+  .brand-title{font-size:14px}
+  .brand-sub{font-size:9.5px}
+  .btn-cta{padding:10px 14px;font-size:13px}
+  .btn-cta .cta-text{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-card.feature{grid-column:span 1;flex-direction:column;align-items:flex-start;gap:18px}
+  .bv-grid{grid-template-columns:1fr}
+  .bv-item{border-left:none !important;padding:26px 0 !important;border-bottom:1px solid var(--line-ivory)}
+  .bv-item:last-child{border-bottom:none}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-item{border-left:none !important;padding:28px 0 !important;border-bottom:1px solid var(--line)}
+  .trust-item:last-child{border-bottom:none}
+  .cross-links{grid-template-columns:1fr}
+  .cross-item{border-left:none}
+  .nf-sugg-grid{grid-template-columns:1fr}
+  .ann-item{grid-template-columns:1fr;gap:14px}
+  .ann-arrow{display:none}
+  .ann-date{flex-direction:row;align-items:baseline;gap:10px}
+  .ann-date .ad-day{font-size:20px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:span 2}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:20px}
+  .hero-meta{grid-template-columns:1fr;gap:16px}
+  .hero-meta-item{display:flex;align-items:baseline;gap:14px}
+  .hero-meta-item .hm-lbl{margin-top:0}
+  .prose h2{margin-top:36px}
+  .faq-a-inner{padding-right:0}
+  .faq-q{gap:14px}
+  .search-input-wrap kbd{display:none}
+  .back-top{bottom:18px;left:18px;width:42px;height:42px}
+  .filter-chips{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:none}
+  .filter-chips::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap;flex:none}
+  .page-head::before,.page-head::after{opacity:.5}
+  .step-item{gap:16px}
+  .step-item::before{width:30px;font-size:14px}
+}
+@media (max-width:400px){
+  .footer-top{grid-template-columns:1fr}
+  .footer-brand{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">پرش به محتوای اصلی</a>
+
+<!-- ============ TOP INSTITUTIONAL BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="topbar-group">
+      <span class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        بندر امام خمینی، خوزستان، ایران
+      </span>
+      <span class="topbar-sep hide-sm"></span>
+      <span class="topbar-item hide-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5M16 4v5"/></svg>
+        <span id="tb-hours"><span class="cfg">ساعات کاری — قابل تنظیم</span></span>
+      </span>
+    </div>
+    <div class="topbar-announce">
+      <span class="dot"></span>
+      <span>پیش از مراجعه، فهرست مدارک مربوط به موضوع خود را از بخش «پیش از مراجعه» بررسی کنید.</span>
+    </div>
+    <div class="topbar-actions">
+      <div class="lang-toggle" role="group" aria-label="انتخاب زبان">
+        <button type="button" aria-pressed="true" data-lang="fa">FA</button>
+        <button type="button" aria-pressed="false" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/" aria-label="صفحه اصلی دفتر اسناد رسمی">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" aria-hidden="true">
+        <rect x="8" y="4" width="24" height="32" rx="2.5" stroke-width="1.6"/>
+        <path d="M14 12h12M14 17h12M14 22h7" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="25" cy="28" r="4.2" stroke-width="1.6"/>
+        <circle cx="25" cy="28" r="1.4" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-title">دفتر اسناد رسمی</span>
+        <span class="brand-sub">Bandar Imam Khomeini</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="ناوبری اصلی" id="mainNav">
+      <a class="nav-link" href="#/" data-route="/">خانه</a>
+
+      <button class="nav-link" data-mega="office" aria-expanded="false" aria-haspopup="true">
+        دفتر
+        <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+
+      <button class="nav-link" data-mega="services" aria-expanded="false" aria-haspopup="true">
+        خدمات
+        <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+
+      <button class="nav-link" data-mega="knowledge" aria-expanded="false" aria-haspopup="true">
+        مرکز دانش
+        <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+
+      <a class="nav-link" href="#/announcements" data-route="/announcements">اطلاعیه‌ها</a>
+      <a class="nav-link" href="#/contact" data-route="/contact">تماس</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchOpen" aria-label="جست‌وجو در وب‌سایت">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      </button>
+      <a class="btn-cta" href="#/contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+        <span class="cta-text">تماس با دفتر</span>
+      </a>
+      <button class="icon-btn menu-btn" id="menuOpen" aria-label="باز کردن منو" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ MEGA MENU ============ -->
+  <div class="mega" id="mega" role="region" aria-label="منوی گسترده">
+    <div class="wrap" style="padding:0">
+      <div class="mega-inner" id="megaInner"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+  <div class="drawer-head">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" aria-hidden="true" style="color:var(--gold)">
+        <rect x="8" y="4" width="24" height="32" rx="2.5" stroke-width="1.6"/>
+        <path d="M14 12h12M14 17h12M14 22h7" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="25" cy="28" r="4.2" stroke-width="1.6"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-title" style="color:#fff">دفتر اسناد رسمی</span>
+        <span class="brand-sub">Bandar Imam Khomeini</span>
+      </span>
+    </div>
+    <button class="icon-btn" id="menuClose" aria-label="بستن منو" style="color:var(--ivory)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<!-- ============ SEARCH MODAL ============ -->
+<div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="جست‌وجو">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <input type="search" id="searchInput" placeholder="جست‌وجو در خدمات، مقالات و راهنماها…" autocomplete="off" aria-label="عبارت جست‌وجو">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <div class="sr-hint">
+      <span>↵ ورود برای مشاهده نتایج</span>
+      <span>↑ ↓ حرکت بین نتایج</span>
+      <span>Esc بستن</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<main id="main" tabindex="-1"></main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#/">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" aria-hidden="true">
+            <rect x="8" y="4" width="24" height="32" rx="2.5" stroke-width="1.6"/>
+            <path d="M14 12h12M14 17h12M14 22h7" stroke-width="1.3" stroke-linecap="round"/>
+            <circle cx="25" cy="28" r="4.2" stroke-width="1.6"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-title">دفتر اسناد رسمی</span>
+            <span class="brand-sub">Bandar Imam Khomeini</span>
+          </span>
+        </a>
+        <p class="footer-about">
+          این وب‌سایت برای اطلاع‌رسانی درباره نقش، خدمات و شرایط عمومی مراجعه به دفتر اسناد رسمی طراحی شده است.
+          اطلاعات مندرج جنبه راهنما دارد و تعیین‌کننده نیست.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>The Office</h5>
+        <ul>
+          <li><a href="#/">خانه</a></li>
+          <li><a href="#/about">درباره دفتر</a></li>
+          <li><a href="#/info">اطلاعات دفتر</a></li>
+          <li><a href="#/before-visit">پیش از مراجعه</a></li>
+          <li><a href="#/faq">پرسش‌های متداول</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#/services">همه خدمات</a></li>
+          <li><a href="#/services/property-real-estate">اسناد ملکی</a></li>
+          <li><a href="#/services/powers-of-attorney">وکالت‌نامه‌ها</a></li>
+          <li><a href="#/services/official-deeds">اسناد رسمی</a></li>
+          <li><a href="#/services/business-corporate">اسناد تجاری</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Knowledge</h5>
+        <ul>
+          <li><a href="#/knowledge">مقالات آگاهی‌بخش</a></li>
+          <li><a href="#/before-visit">راهنمای آماده‌سازی</a></li>
+          <li><a href="#/knowledge/required-documents-guide">مدارک مورد نیاز</a></li>
+          <li><a href="#/announcements">اطلاعیه‌ها</a></li>
+          <li><a href="#/knowledge/notary-terms">واژه‌نامه اصطلاحات</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>بندر امام خمینی، خوزستان، ایران</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+            <span><span class="cfg">شماره تماس — قابل تنظیم</span></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span><span class="cfg">ساعات کاری — قابل تنظیم</span></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+            <span><span class="cfg">شماره دفتر — قابل تنظیم</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">
+          © <span id="yr"></span> دفتر اسناد رسمی — بندر امام خمینی، خوزستان. کلیه حقوق محفوظ است.
+        </p>
+        <p class="footer-disclaimer">
+          محتوای این وب‌سایت صرفاً جنبه اطلاع‌رسانی عمومی دارد و به‌عنوان مشاوره حقوقی، تعیین تکلیف پرونده یا جانشین اطلاعات رسمی دفتر تلقی نمی‌شود.
+          شرایط و مدارک هر موضوع، بسته به ماهیت آن و مقررات جاری، متفاوت است و لازم است پیش از مراجعه با دفتر هماهنگ شود.
+        </p>
+      </div>
+      <div class="footer-legal">
+        <a href="#/info">اطلاعات دفتر</a>
+        <a href="#/faq">پرسش‌های متداول</a>
+        <a href="#/contact">تماس</a>
+        <a href="#/search">جست‌وجو</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-ornament">
+    <svg viewBox="0 0 1200 52" preserveAspectRatio="none" fill="none" stroke="#B69A62" stroke-width="1">
+      <path d="M0 46 L1200 46" opacity=".25"/>
+      <path d="M0 26 Q150 6 300 26 T600 26 T900 26 T1200 26" opacity=".5"/>
+      <circle cx="300" cy="26" r="2.5" fill="#B69A62" stroke="none" opacity=".7"/>
+      <circle cx="600" cy="26" r="2.5" fill="#B69A62" stroke="none" opacity=".7"/>
+      <circle cx="900" cy="26" r="2.5" fill="#B69A62" stroke="none" opacity=".7"/>
+    </svg>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="بازگشت به بالای صفحه">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* =========================================================
+   CONFIGURATION — fields marked as configurable are not
+   fabricated. Replace with verified office information.
+   ========================================================= */
+const CFG = {
+  officeName: 'دفتر اسناد رسمی',
+  officeNumber: null,        // شماره دفتر — قابل تنظیم
+  city: 'بندر امام خمینی',
+  province: 'خوزستان',
+  country: 'ایران',
+  phone: null,               // تلفن — قابل تنظیم
+  address: null,             // نشانی — قابل تنظیم
+  hours: null,               // ساعات کاری — قابل تنظیم
+  mapUrl: null,              // پیوند نقشه — قابل تنظیم
+  email: null
+};
+
+/* =========================================================
+   DATA
+   ========================================================= */
+const ICONS = {
+  property:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10l9-7 9 7v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>',
+  power:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>',
+  deed:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 5.5L20 8l-4 4 1 6-5-2.8L7 18l1-6-4-4 5.5-.5z"/></svg>',
+  business:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16M2 13h20"/></svg>',
+  inherit:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6M12 8v4M10 10h4"/></svg>',
+  other:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>'
+};
+
+const SERVICES = [
+  {
+    slug:'property-real-estate',
+    title:'اسناد مربوط به املاک و مستغلات',
+    short:'دسته‌بندی اطلاعاتی برای موضوعات مرتبط با اموال غیرمنقول و اسناد مالکیت.',
+    icon:'property',
+    tag:'املاک',
+    purpose:'این دسته به موضوعاتی مربوط می‌شود که به اموال غیرمنقول — از قبیل زمین، ساختمان و واحدهای احداثی — مرتبط‌اند. هدف این صفحه، ارائهٔ یک نمای کلی از مسیر عمومی آماده‌سازی است؛ نه تعیین الزامات قطعی.',
+    docs:[
+      'مدارک هویتی معتبر طرفین یا نمایندگان آنان',
+      'اسناد مالکیت یا مدارکی که وضعیت ملک را نشان می‌دهد',
+      'مدارک مربوط به پرداخت‌ها یا تعهدات مالی، در صورت وجود',
+      'استعلام‌ها یا پاسخ‌های رسمی مرتبط با ملک، در صورت درخواست دفتر',
+      'مدارک نمایندگی، در صورتی که فردی به نیابت از طرف دیگر حاضر شود'
+    ],
+    steps:[
+      {t:'روشن کردن موضوع',d:'پیش از هر اقدام، مشخص کنید که موضوع به انتقال، تعهد، اقرار یا تنظیم سند مربوط است و طرفین چه کسانی هستند.'},
+      {t:'فهرست اولیهٔ مدارک',d:'فهرستی از مدارک موجود تهیه کنید. در این مرحله لازم نیست همهٔ مدارک کامل باشد؛ هدف، شفاف شدن وضعیت است.'},
+      {t:'هماهنگی با دفتر',d:'پیش از مراجعه، جزئیات موضوع را با دفتر در میان بگذارید تا مشخص شود چه مدارکی در شرایط شما لازم است.'},
+      {t:'تکمیل مدارک',d:'بر اساس راهنمایی دفتر، مدارک ناقص یا نیازمند استعلام را تکمیل کنید.'},
+      {t:'مراجعه و تنظیم',d:'پس از تأیید آماده بودن شرایط، برای تنظیم سند در زمان هماهنگ‌شده مراجعه کنید.'}
+    ],
+    questions:[
+      'آیا ملک دارای سند رسمی است یا وضعیت آن نیاز به بررسی بیشتری دارد؟',
+      'آیا محدودیت، بازداشت یا تعهدی روی ملک ثبت شده است؟',
+      'آیا همهٔ طرفین باید شخصاً حاضر شوند یا نمایندگی امکان‌پذیر است؟',
+      'آیا مدارک هویتی موجود، معتبر و به‌روز هستند؟'
+    ],
+    related:['powers-of-attorney','official-deeds','inherit-docs']
+  },
+  {
+    slug:'powers-of-attorney',
+    title:'وکالت‌نامه‌ها',
+    short:'راهنمای عمومی دربارهٔ مفهوم و مسیر آماده‌سازی وکالت‌نامه در دفتر اسناد رسمی.',
+    icon:'power',
+    tag:'وکالت',
+    purpose:'وکالت‌نامه سندی است که به موجب آن، فردی دیگری را برای انجام موضوعی مشخص نایب خود می‌کند. دامنهٔ اختیارات، مدت اعتبار و شرایط وکالت‌نامه باید روشن و دقیق باشد.',
+    docs:[
+      'مدارک هویتی وکیل و موکل',
+      'تعیین دقیق موضوع و حدود اختیارات',
+      'مدارک مرتبط با موضوعی که وکالت برای آن تنظیم می‌شود',
+      'در صورت وجود، اسناد یا مدارک پشتیبان موضوع'
+    ],
+    steps:[
+      {t:'تعیین موضوع وکالت',d:'مشخص کنید که وکالت برای چه امری و با چه دامنه‌ای تنظیم می‌شود.'},
+      {t:'تعیین حدود اختیارات',d:'اختیارات وکیل باید صریح و محدود به موضوع باشد تا از برداشت‌های نادرست جلوگیری شود.'},
+      {t:'تعیین مدت اعتبار',d:'در صورت نیاز، مدت اعتبار وکالت‌نامه را مشخص کنید.'},
+      {t:'هماهنگی پیش از مراجعه',d:'موضوع را با دفتر در میان بگذارید تا از مدارک و شرایط لازم آگاه شوید.'},
+      {t:'حضور و تنظیم سند',d:'طرفین در زمان هماهنگ‌شده حاضر می‌شوند و سند تنظیم می‌گردد.'}
+    ],
+    questions:[
+      'آیا وکالت به‌صورت محدود و برای موضوعی مشخص تنظیم می‌شود؟',
+      'آیا حق عزل وکیل برای موکل محفوظ می‌ماند؟',
+      'آیا وکالت‌نامه قابل فسخ یا محدود به زمان است؟',
+      'آیا شخص ثالثی باید از مفاد وکالت‌نامه مطلع شود؟'
+    ],
+    related:['property-real-estate','business-corporate','official-deeds']
+  },
+  {
+    slug:'official-deeds',
+    title:'اسناد و اقرارنامه‌های رسمی',
+    short:'دسته‌بندی اطلاعاتی برای اقرارنامه‌ها، تعهدنامه‌ها و اسناد رسمی متداول.',
+    icon:'deed',
+    tag:'اسناد رسمی',
+    purpose:'این دسته به اسنادی مربوط می‌شود که هدف آن‌ها ثبت رسمی یک اقرار، تعهد یا اعلام است. دقت در عبارات و روشن بودن موضوع، اهمیت اصلی را دارد.',
+    docs:[
+      'مدارک هویتی اظهارکننده',
+      'مدارک پشتیبان موضوع اقرار یا تعهد، در صورت وجود',
+      'متن یا چکیدهٔ موضوع مورد نظر',
+      'مدارک مربوط به اشخاص ثالث مرتبط با موضوع'
+    ],
+    steps:[
+      {t:'روشن کردن موضوع',d:'موضوع اقرار یا تعهد را در یک جملهٔ روشن خلاصه کنید.'},
+      {t:'آماده‌سازی مدارک',d:'مدارک مرتبط با موضوع را جمع‌آوری کنید.'},
+      {t:'بررسی اولیه با دفتر',d:'پیش از مراجعه، موضوع را برای بررسی اولیه مطرح کنید.'},
+      {t:'تنظیم پیش‌نویس',d:'در صورت نیاز، مفاد سند پیش از حضور نهایی بررسی می‌شود.'},
+      {t:'حضور و امضا',d:'پس از تأیید، سند در حضور طرف مربوطه تنظیم و امضا می‌شود.'}
+    ],
+    questions:[
+      'آیا موضوع اقرار یا تعهد به‌اندازهٔ کافی روشن و صریح است؟',
+      'آیا اشخاص ثالثی در موضوع دخیل هستند؟',
+      'آیا سند نیاز به ضمانت یا تعهد اجرایی دارد؟',
+      'آیا محدودیت قانونی برای موضوع وجود دارد؟'
+    ],
+    related:['property-real-estate','inherit-docs','other-services']
+  },
+  {
+    slug:'business-corporate',
+    title:'اسناد تجاری و شرکتی',
+    short:'دسته‌بندی اطلاعاتی برای موضوعات مرتبط با شرکت‌ها، بازرگانان و اسناد تجاری.',
+    icon:'business',
+    tag:'تجاری',
+    purpose:'این دسته موضوعاتی را دربر می‌گیرد که به فعالیت‌های تجاری، شرکت‌ها و اسناد مرتبط با آن‌ها مربوط می‌شود. تعیین دقیق سمت امضاکنندگان و اختیارات آنان اهمیت بالایی دارد.',
+    docs:[
+      'مدارک هویتی امضاکنندگان',
+      'مدارک نشان‌دهندهٔ سمت و اختیار امضاکنندگان',
+      'اساسنامه یا مدارک مشابه شرکت، در صورت لزوم',
+      'مدارک مرتبط با موضوع معامله یا تعهد'
+    ],
+    steps:[
+      {t:'تعیین سمت امضاکننده',d:'مشخص کنید که امضاکننده با چه سمتی و بر اساس چه اختیاری اقدام می‌کند.'},
+      {t:'بررسی مدارک شرکت',d:'مدارک مرتبط با شرکت و اختیارات نمایندگان آن را آماده کنید.'},
+      {t:'هماهنگی موضوع',d:'موضوع سند و شرایط آن را با دفتر در میان بگذارید.'},
+      {t:'تنظیم و امضا',d:'پس از تأیید مدارک، سند تنظیم و امضا می‌شود.'}
+    ],
+    questions:[
+      'آیا امضاکننده دارای اختیار کافی برای امضا است؟',
+      'آیا مدارک شرکت به‌روز و معتبر هستند؟',
+      'آیا موضوع سند نیازمند تأییدیهٔ جداگانه است؟',
+      'آیا محدودیتی در اساسنامه برای این نوع اقدام وجود دارد؟'
+    ],
+    related:['official-deeds','powers-of-attorney','property-real-estate']
+  },
+  {
+    slug:'inherit-docs',
+    title:'اسناد مرتبط با ارث',
+    short:'دسته‌بندی اطلاعاتی برای موضوعات مربوط به تقسیم‌الترکه و اسناد مرتبط با وراث.',
+    icon:'inherit',
+    tag:'ارث',
+    purpose:'این دسته به موضوعاتی مربوط می‌شود که پس از فوت یک شخص و در ارتباط با اموال و تعهدات او مطرح می‌گردد. تعیین دقیق وراث و سهم آنان، مبنای اصلی کار است.',
+    docs:[
+      'مدارک هویتی وراث',
+      'مدارک مثبِتِ رابطهٔ وراث با متوفی',
+      'گواهی حصر وراثت یا مدارک مشابه، در صورت موجود بودن',
+      'مدارک مربوط به اموال یا تعهدات متوفی',
+      'در صورت وجود، وصیت‌نامه یا مدارک مرتبط'
+    ],
+    steps:[
+      {t:'تعیین وراث',d:'فهرست وراث و نسبت آنان با متوفی مشخص می‌شود.'},
+      {t:'آماده‌سازی مدارک',d:'مدارک هویتی و مدارک مثبِتِ نسبت، آماده می‌شود.'},
+      {t:'بررسی موضوع',d:'موضوع (تقسیم، انتقال، اقرار) با دفتر در میان گذاشته می‌شود.'},
+      {t:'هماهنگی نهایی',d:'زمان و شرایط حضور وراث هماهنگ می‌شود.'},
+      {t:'تنظیم سند',d:'سند در حضور وراث مربوطه تنظیم می‌گردد.'}
+    ],
+    questions:[
+      'آیا گواهی حصر وراثت صادر شده است؟',
+      'آیا همهٔ وراث حاضر به اقدام هستند؟',
+      'آیا وصیت‌نامه‌ای وجود دارد که باید لحاظ شود؟',
+      'آیا اموال یا تعهداتی خارج از ترکه باقی مانده است؟'
+    ],
+    related:['property-real-estate','official-deeds','other-services']
+  },
+  {
+    slug:'other-services',
+    title:'سایر خدمات دفترخانه',
+    short:'دسته‌بندی اطلاعاتی برای موضوعاتی که در دسته‌های دیگر جای نمی‌گیرند.',
+    icon:'other',
+    tag:'سایر',
+    purpose:'برخی موضوعات در دسته‌های پیش‌گفته جای نمی‌گیرند یا ترکیبی از چند دسته‌اند. این صفحه برای راهنمایی اولیه دربارهٔ این‌گونه موارد است.',
+    docs:[
+      'مدارک هویتی طرفین',
+      'مدارک مرتبط با موضوع خاص مورد نظر',
+      'توضیح کتبی یا شفاهی موضوع'
+    ],
+    steps:[
+      {t:'توصیف موضوع',d:'موضوع را به‌روشنی برای دفتر توصیف کنید.'},
+      {t:'دریافت راهنمایی',d:'دفتر مشخص می‌کند که موضوع در کدام دسته قرار می‌گیرد و چه مدارکی لازم است.'},
+      {t:'آماده‌سازی و مراجعه',d:'مدارک لازم آماده و در زمان هماهنگ‌شده مراجعه می‌شود.'}
+    ],
+    questions:[
+      'موضوع دقیقاً چه چیزی است و چه هدفی دارد؟',
+      'آیا موضوع نیازمند استعلام یا تأییدیهٔ جداگانه است؟',
+      'آیا افراد دیگری باید حضور داشته باشند؟'
+    ],
+    related:['official-deeds','business-corporate','inherit-docs']
+  }
+];
+
+const ARTICLES = [
+  {
+    slug:'prepare-before-visit',
+    title:'پیش از مراجعه: چگونه برای تنظیم سند آماده شویم',
+    category:'راهنمای آماده‌سازی',
+    excerpt:'آماده‌سازی درست پیش از مراجعه، مسیر تنظیم سند را کوتاه‌تر و شفاف‌تر می‌کند. این راهنما یک چارچوب عمومی ارائه می‌دهد.',
+    date:'۱۴۰۳/۰۱/۱۵',
+    body:[
+      {t:'چرا آماده‌سازی اهمیت دارد؟',p:'بسیاری از تأخیرها در فرایند تنظیم سند، ناشی از نبود مدارک یا روشن نبودن موضوع است. وقتی موضوع و مدارک پیش از مراجعه روشن باشد، جلسهٔ تنظیم سند با سرعت و دقت بیشتری پیش می‌رود.'},
+      {t:'سه پرسش پیش از هر مراجعه',p:'پیش از مراجعه، این سه پرسش را از خود بپرسید: موضوع دقیقاً چیست؟ چه کسانی طرفین ماجرا هستند؟ چه مدارکی در اختیار دارم و چه مدارکی ممکن است لازم باشد؟'},
+      {t:'فهرست مدارک، نه فهرست قطعی',list:[
+        'مدارک هویتی معتبر همهٔ طرفین',
+        'مدارک مرتبط با موضوع (مالکیت، تعهد، سابقهٔ ثبتی و…)',
+        'مدارک نمایندگی، در صورت وجود',
+        'پیش‌نویس یا چکیدهٔ موضوع، در صورت آماده بودن'
+      ]},
+      {t:'هماهنگی پیش از حضور',p:'پیش از حضور، بهتر است موضوع را با دفتر در میان بگذارید. این هماهنگی اولیه به شما کمک می‌کند بدانید چه مدارکی لازم است و چه زمان‌بندی مناسب‌تری وجود دارد.'},
+      {t:'نکتهٔ پایانی',p:'الزامات هر موضوع، بسته به ماهیت آن و مقررات جاری، متفاوت است. آنچه در این راهنما آمده، یک چارچوب عمومی است و جایگزین راهنمایی اختصاصی دفتر نیست.'}
+    ]
+  },
+  {
+    slug:'notary-terms',
+    title:'اصطلاحات رایج در دفتر اسناد رسمی',
+    category:'واژه‌نامه',
+    excerpt:'آشنایی با اصطلاحات متداول، درک بهتری از فرایند تنظیم سند و گفت‌وگو با دفتر فراهم می‌کند.',
+    date:'۱۴۰۳/۰۲/۰۳',
+    body:[
+      {t:'چرا آشنایی با اصطلاحات مفید است؟',p:'در گفت‌وگو با دفتر، ممکن است اصطلاحاتی به‌کار رود که برای فرد غیرمتخصص روشن نباشد. آشنایی مقدماتی با این اصطلاحات، ارتباط را دقیق‌تر می‌کند.'},
+      {t:'برخی اصطلاحات پرکاربرد',list:[
+        'سند رسمی: سندی که در دفتر اسناد رسمی و با رعایت تشریفات تنظیم شده است.',
+        'اقرارنامه: سندی که در آن فرد به موضوعی به‌نفع دیگری اقرار می‌کند.',
+        'وکالت‌نامه: سندی که به موجب آن فردی برای موضوعی مشخص، نایب دیگری می‌شود.',
+        'تقسیم‌الترکه: فرایند تقسیم اموال باقی‌مانده از متوفی میان وراث.',
+        'استعلام: درخواست اطلاعات رسمی از مراجع مربوطه برای روشن شدن وضعیت موضوع.'
+      ]},
+      {t:'نکته',p:'این واژه‌نامه صرفاً جنبهٔ آشنایی عمومی دارد. تعریف دقیق و آثار حقوقی هر اصطلاح، بسته به متن سند و مقررات جاری متفاوت است.'}
+    ]
+  },
+  {
+    slug:'common-mistakes',
+    title:'اشتباهات رایج در آماده‌سازی مدارک',
+    category:'راهنمای عملی',
+    excerpt:'چند اشتباه تکرارشونده که مسیر تنظیم سند را طولانی‌تر می‌کند — و راه پرهیز از آن‌ها.',
+    date:'۱۴۰۳/۰۲/۲۰',
+    body:[
+      {t:'مدارک هویتی منقضی',p:'یکی از رایج‌ترین دلایل توقف کار، ارائهٔ مدارک هویتی منقضی یا ناخوانا است. پیش از مراجعه، از معتبر و به‌روز بودن مدارک اطمینان حاصل کنید.'},
+      {t:'روشن نبودن موضوع',p:'وقتی موضوع سند در ذهن طرفین روشن نیست، جلسهٔ تنظیم سند به گفت‌وگوهای طولانی تبدیل می‌شود. پیش از مراجعه، موضوع را در یک یا دو جملهٔ روشن خلاصه کنید.'},
+      {t:'نادیده گرفتن نمایندگی',p:'اگر فردی به‌جای دیگری حاضر می‌شود، مدارک نمایندگی باید از پیش آماده باشد. نبود این مدارک، روند را متوقف می‌کند.'},
+      {t:'عدم هماهنگی پیش از مراجعه',p:'مراجعهٔ بدون هماهنگی، به‌ویژه در موضوعات پیچیده، ممکن است به رفت‌وآمد اضافی منجر شود. یک تماس کوتاه پیش از مراجعه، زمان زیادی صرفه‌جویی می‌کند.'},
+      {t:'تکیه بر اطلاعات غیررسمی',p:'اطلاعاتی که از منابع غیررسمی دریافت می‌شود، ممکن است با شرایط واقعی مطابقت نداشته باشد. مرجع نهایی، راهنمایی مستقیم دفتر است.'}
+    ]
+  },
+  {
+    slug:'required-documents-guide',
+    title:'راهنمای عمومی مدارک: چه چیزی همراه داشته باشیم؟',
+    category:'مدارک',
+    excerpt:'یک چارچوب عمومی برای فهرست کردن مدارک پیش از مراجعه، به‌همراه توضیح دربارهٔ تفاوت‌های موضوعی.',
+    date:'۱۴۰۳/۰۳/۰۸',
+    body:[
+      {t:'یک چارچوب، نه یک فهرست قطعی',p:'فهرست مدارک مورد نیاز، بسته به نوع موضوع و شرایط هر پرونده متفاوت است. آنچه در ادامه می‌آید، یک چارچوب عمومی برای شروع است.'},
+      {t:'دسته‌های کلی مدارک',list:[
+        'مدارک هویتی: کارت ملی، شناسنامه یا گذرنامهٔ معتبر',
+        'مدارک موضوعی: اسناد مالکیت، قراردادها، تعهدات و مدارک مشابه',
+        'مدارک نمایندگی: وکالت‌نامه یا مدارک مثبِتِ سمت',
+        'مدارک تکمیلی: استعلام‌ها، تأییدیه‌ها یا پاسخ‌های رسمی'
+      ]},
+      {t:'پرسش‌هایی که باید پیش از مراجعه پاسخ دهید',list:[
+        'موضوع دقیقاً چیست و هدف نهایی آن چه چیزی است؟',
+        'چه کسانی طرفین ماجرا هستند و آیا همهٔ آنان حاضر خواهند بود؟',
+        'آیا شخصی به نمایندگی از دیگری اقدام می‌کند؟',
+        'آیا مدارک موجود، معتبر و به‌روز هستند؟'
+      ]},
+      {t:'هماهنگی نهایی',p:'پس از تهیهٔ فهرست اولیه، بهتر است موضوع و مدارک را با دفتر در میان بگذارید تا مشخص شود چه مواردی در شرایط خاص شما لازم است.'}
+    ]
+  },
+  {
+    slug:'power-of-attorney-basics',
+    title:'وکالت‌نامه: مفهوم، کاربرد و نکات عمومی',
+    category:'راهنمای موضوعی',
+    excerpt:'وکالت‌نامه سندی است که به موجب آن، دامنهٔ اختیارات فردی برای موضوعی مشخص تعیین می‌شود.',
+    date:'۱۴۰۳/۰۳/۲۲',
+    body:[
+      {t:'وکالت‌نامه چیست؟',p:'وکالت‌نامه سندی است که به موجب آن، فردی (موکل) فرد دیگری (وکیل) را برای انجام موضوعی مشخص نایب خود می‌کند. دامنهٔ اختیارات، مدت اعتبار و شرایط آن باید در سند روشن باشد.'},
+      {t:'نکات عمومی پیش از تنظیم',list:[
+        'موضوع وکالت را در یک جملهٔ روشن مشخص کنید.',
+        'حدود اختیارات وکیل را صریح و محدود تعیین کنید.',
+        'در صورت نیاز، مدت اعتبار را ذکر کنید.',
+        'دربارهٔ حق عزل وکیل تصمیم بگیرید.',
+        'در صورت وجود اشخاص ثالث مرتبط، آنان را در نظر بگیرید.'
+      ]},
+      {t:'چرا دامنهٔ اختیارات اهمیت دارد؟',p:'وکالت‌نامه‌ای که اختیارات آن روشن نباشد، می‌تواند به برداشت‌های متفاوت منجر شود. تعیین دقیق دامنهٔ اختیارات، از بروز ابهام در آینده جلوگیری می‌کند.'},
+      {t:'هماهنگی با دفتر',p:'پیش از تنظیم وکالت‌نامه، موضوع و دامنهٔ اختیارات را با دفتر در میان بگذارید تا از مدارک و شرایط لازم آگاه شوید.'}
+    ]
+  },
+  {
+    slug:'property-documents-intro',
+    title:'اسناد ملکی: نگاهی مقدماتی به مسیر آماده‌سازی',
+    category:'راهنمای موضوعی',
+    excerpt:'یک مرور عمومی بر موضوعاتی که در ارتباط با اموال غیرمنقول مطرح می‌شود.',
+    date:'۱۴۰۳/۰۴/۰۵',
+    body:[
+      {t:'دامنهٔ موضوع',p:'موضوعات مرتبط با اموال غیرمنقول گسترده‌اند: از انتقال مالکیت و تنظیم تعهد تا اقرار و رفع ابهام. هر یک از این موضوعات، مسیر آماده‌سازی خاص خود را دارد.'},
+      {t:'پرسش‌های کلیدی',list:[
+        'وضعیت ثبتی ملک چگونه است؟',
+        'آیا محدودیت، بازداشت یا تعهدی روی ملک وجود دارد؟',
+        'آیا همهٔ طرفین حاضر به اقدام هستند؟',
+        'آیا مدارک هویتی و مالکیت به‌روز هستند؟'
+      ]},
+      {t:'مسیر عمومی آماده‌سازی',p:'روشن کردن موضوع، تهیهٔ فهرست اولیهٔ مدارک، هماهنگی با دفتر و تکمیل مدارک — این چهار گام، چارچوب عمومی پیش از مراجعه است.'},
+      {t:'نکتهٔ مهم',p:'شرایط هر ملک و هر موضوع، متفاوت است. آنچه در این نوشتار آمده، جنبهٔ راهنمای عمومی دارد و جایگزین بررسی اختصاصی نیست.'}
+    ]
+  }
+];
+
+const ANNOUNCEMENTS = [
+  {
+    slug:'visit-preparation-guide',
+    title:'راهنمای آماده‌سازی پیش از مراجعه منتشر شد',
+    category:'راهنما',
+    date:'۱۴۰۳/۰۴/۱۰',
+    excerpt:'بخش «پیش از مراجعه» با فهرست‌های عمومی آماده‌سازی و پرسش‌های کلیدی، برای کمک به مراجعان طراحی شده است.',
+    body:[
+      {t:'دربارهٔ این بخش',p:'بخش «پیش از مراجعه» برای این طراحی شده است که مراجعان پیش از حضور در دفتر، تصویری روشن از مسیر آماده‌سازی داشته باشند.'},
+      {t:'چه چیزی در این بخش هست؟',list:[
+        'فهرست عمومی آماده‌سازی',
+        'پرسش‌هایی که پیش از مراجعه باید پاسخ داده شوند',
+        'راهنمای موضوعی برای دسته‌های مختلف خدمات',
+        'پیوند به صفحات مرتبط'
+      ]},
+      {t:'یادآوری',p:'الزامات هر موضوع، بسته به ماهیت آن و مقررات جاری، متفاوت است. این بخش جایگزین راهنمایی اختصاصی دفتر نیست.'}
+    ]
+  },
+  {
+    slug:'office-hours-note',
+    title:'دربارهٔ ساعات کاری دفتر',
+    category:'اطلاع‌رسانی',
+    date:'۱۴۰۳/۰۴/۰۱',
+    excerpt:'اطلاعات مربوط به ساعات کاری، در بخش «اطلاعات دفتر» و نوار بالای سایت نمایش داده می‌شود.',
+    body:[
+      {t:'ساعات کاری',p:'ساعات کاری دفتر در بخش «اطلاعات دفتر» و همچنین در نوار بالای سایت نمایش داده می‌شود. برای اطلاع از ساعات دقیق، به این بخش‌ها مراجعه کنید یا با دفتر تماس بگیرید.'},
+      {t:'توصیه',p:'برای موضوعات خاص یا هماهنگی‌های ویژه، پیش از مراجعه با دفتر تماس بگیرید تا از زمان مناسب مطلع شوید.'}
+    ]
+  },
+  {
+    slug:'knowledge-center-structure',
+    title:'ساختار مرکز دانش به‌روزرسانی شد',
+    category:'وب‌سایت',
+    date:'۱۴۰۳/۰۳/۲۵',
+    excerpt:'مقالات، راهنماها و واژه‌نامه در ساختاری یکپارچه سازماندهی شده‌اند تا جست‌وجو ساده‌تر شود.',
+    body:[
+      {t:'چه چیزی تغییر کرد؟',p:'مقالات و راهنماها در دسته‌بندی‌های روشن‌تری سازماندهی شده‌اند و امکان جست‌وجو و فیلتر در آن‌ها فراهم شده است.'},
+      {t:'دسته‌بندی‌ها',list:[
+        'راهنمای آماده‌سازی',
+        'واژه‌نامه',
+        'راهنمای عملی',
+        'راهنمای موضوعی'
+      ]},
+      {t:'یادآوری',p:'محتوای مرکز دانش جنبهٔ اطلاع‌رسانی عمومی دارد و جایگزین راهنمایی اختصاصی دفتر نیست.'}
+    ]
+  }
+];
+
+const FAQS = [
+  {c:'آماده‌سازی', q:'پیش از مراجعه به دفتر، چه کارهایی باید انجام دهم؟',
+   a:'پیش از مراجعه، موضوع را در یک جملهٔ روشن خلاصه کنید، فهرست اولیه‌ای از مدارک موجود تهیه کنید و بهتر است موضوع را با دفتر در میان بگذارید تا از مدارک و شرایط لازم آگاه شوید. برای جزئیات بیشتر، بخش «پیش از مراجعه» را ببینید.'},
+  {c:'مدارک', q:'چه مدارکی باید همراه داشته باشم؟',
+   a:'مدارک مورد نیاز بسته به نوع موضوع و شرایط هر پرونده متفاوت است. به‌طور کلی، مدارک هویتی معتبر، مدارک مرتبط با موضوع و در صورت وجود، مدارک نمایندگی لازم است. برای جزئیات، صفحهٔ «پیش از مراجعه» و راهنمای عمومی مدارک را ببینید.'},
+  {c:'خدمات', q:'چگونه بدانم موضوع من در کدام دستهٔ خدماتی قرار می‌گیرد؟',
+   a:'در صفحهٔ «خدمات»، دسته‌بندی‌های اصلی همراه با توضیح کوتاه آمده است. اگر موضوع شما در هیچ‌یک از دسته‌ها جای نمی‌گیرد، در صفحهٔ «سایر خدمات دفترخانه» توضیح داده شده که چگونه می‌توانید راهنمایی بگیرید.'},
+  {c:'وکالت', q:'برای تنظیم وکالت‌نامه چه نکاتی را باید مشخص کنم؟',
+   a:'موضوع وکالت، دامنهٔ اختیارات وکیل، مدت اعتبار (در صورت نیاز) و حق عزل وکیل از جمله مواردی هستند که بهتر است پیش از مراجعه روشن شوند. توضیح بیشتر در صفحهٔ «وکالت‌نامه‌ها» و مقالهٔ «وکالت‌نامه: مفهوم، کاربرد و نکات عمومی» آمده است.'},
+  {c:'تماس', q:'چگونه می‌توانم دربارهٔ موضوعی که برایم روشن نیست، توضیح بگیرم؟',
+   a:'می‌توانید با دفتر تماس بگیرید یا به‌صورت حضوری مراجعه کنید. اطلاعات تماس در صفحهٔ «تماس» و بخش «اطلاعات دفتر» درج شده است. توصیه می‌شود موضوع را پیش از تماس، در یک یا دو جملهٔ روشن خلاصه کنید.'},
+  {c:'آماده‌سازی', q:'آیا فهرست مدارک در وب‌سایت، قطعی و نهایی است؟',
+   a:'خیر. فهرست‌های ارائه‌شده در وب‌سایت جنبهٔ راهنمای عمومی دارند و الزامات هر موضوع بسته به ماهیت آن و مقررات جاری متفاوت است. مرجع نهایی، راهنمایی مستقیم دفتر است.'},
+  {c:'مدارک', q:'اگر مدارک من کامل نباشد، آیا می‌توانم مراجعه کنم؟',
+   a:'مراجعه با مدارک ناقص ممکن است به رفت‌وآمد اضافی منجر شود. توصیه می‌شود پیش از مراجعه، موضوع را با دفتر در میان بگذارید تا مشخص شود چه مدارکی در شرایط شما لازم است.'},
+  {c:'خدمات', q:'آیا همهٔ خدمات در همهٔ شرایط قابل انجام است؟',
+   a:'دسته‌بندی‌های خدماتی در این وب‌سایت، اطلاعاتی هستند و به‌معنای امکان‌پذیری همهٔ آن‌ها در همهٔ شرایط نیست. امکان‌پذیری هر موضوع، بسته به ماهیت آن و مقررات جاری تعیین می‌شود.'},
+  {c:'ارث', q:'برای موضوعات مرتبط با ارث، چه چیزی را باید مشخص کنم؟',
+   a:'فهرست وراث، نسبت آنان با متوفی و وجود یا نبود گواهی حصر وراثت از جمله موارد مهم است. توضیح بیشتر در صفحهٔ «اسناد مرتبط با ارث» آمده است.'},
+  {c:'تماس', q:'آیا می‌توانم پیش از مراجعه، موضوع را به‌صورت تلفنی توضیح دهم؟',
+   a:'بله، تماس تلفنی می‌تواند برای هماهنگی اولیه مفید باشد. اطلاعات تماس در صفحهٔ «تماس» درج شده است. در موضوعات پیچیده، ممکن است لازم باشد برای بررسی دقیق‌تر مراجعهٔ حضوری انجام شود.'}
+];
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cfgSpan = (label)=>`<span class="cfg">${esc(label)}</span>`;
+const wordCount = t => (t||'').trim().split(/\s+/).filter(Boolean).length;
+const readTime = body => {
+  if(!body) return null;
+  let w = 0;
+  body.forEach(s=>{
+    w += wordCount(s.t||'') + wordCount(s.p||'');
+    if(s.list) s.list.forEach(i=>w+=wordCount(i));
+  });
+  return Math.max(1, Math.round(w/180));
+};
+
+/* =========================================================
+   ICONS (inline SVG library)
+   ========================================================= */
+const I = {
+  arrowLeft:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+  arrowRight:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+  chevron:'<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',
+  info:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+  scale:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M3 7h18M6 7l-3 6h6zM18 7l-3 6h6zM9 21h6"/></svg>',
+  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+  layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l10 6-10 6L2 8z"/><path d="M2 14l10 6 10-6"/></svg>',
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>'
+};
+
+/* =========================================================
+   ARCHITECTURAL SVG VISUALS
+   ========================================================= */
+function svgHero(){
+  return `<svg viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="تصویر معماری انتزاعی از خطوط و قوس‌ها">
+    <defs>
+      <linearGradient id="hg1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#182A44"/><stop offset="100%" stop-color="#0B1523"/>
+      </linearGradient>
+      <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#B69A62" stop-opacity=".5"/><stop offset="100%" stop-color="#B69A62" stop-opacity="0"/>
+      </linearGradient>
+      <pattern id="hp" width="48" height="48" patternUnits="userSpaceOnUse">
+        <path d="M0 24h48M24 0v48" stroke="#B69A62" stroke-width=".4" opacity=".12"/>
+      </pattern>
+    </defs>
+    <rect width="600" height="800" fill="url(#hg1)"/>
+    <rect width="600" height="800" fill="url(#hp)"/>
+    <!-- arches -->
+    <g stroke="#B69A62" fill="none" opacity=".55">
+      <path d="M120 720 V400 a90 90 0 0 1 180 0 V720" stroke-width="1.4"/>
+      <path d="M160 720 V420 a50 50 0 0 1 100 0 V720" stroke-width="1"/>
+      <path d="M320 720 V340 a70 70 0 0 1 140 0 V720" stroke-width="1.4"/>
+      <path d="M355 720 V355 a35 35 0 0 1 70 0 V720" stroke-width="1"/>
+    </g>
+    <!-- columns -->
+    <g stroke="#F4F0E7" opacity=".16" stroke-width="1">
+      <path d="M70 720V240M90 720V240M110 720V240"/>
+      <path d="M480 720V280M500 720V280M520 720V280"/>
+    </g>
+    <!-- base lines -->
+    <g stroke="#F4F0E7" opacity=".25">
+      <path d="M40 720h520" stroke-width="1.2"/>
+      <path d="M40 732h520" stroke-width=".7" opacity=".6"/>
+    </g>
+    <!-- light sweep -->
+    <rect x="0" y="0" width="600" height="800" fill="url(#hg2)" opacity=".35"/>
+    <!-- floating dots -->
+    <g fill="#B69A62" opacity=".6">
+      <circle cx="90" cy="140" r="2"/><circle cx="540" cy="200" r="2"/>
+      <circle cx="470" cy="90" r="1.5"/><circle cx="150" cy="300" r="1.5"/>
+    </g>
+  </svg>`;
+}
+
+function svgDocument(){
+  return `<svg viewBox="0 0 500 620" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ترکیب هندسی انتزاعی از سند و مهر">
+    <defs>
+      <linearGradient id="dg1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#182A44"/><stop offset="100%" stop-color="#101D30"/>
+      </linearGradient>
+    </defs>
+    <rect width="500" height="620" fill="url(#dg1)"/>
+    <g stroke="#B69A62" fill="none" opacity=".4">
+      <rect x="90" y="90" width="320" height="440" rx="3" stroke-width="1.2"/>
+      <rect x="110" y="110" width="280" height="400" rx="2" stroke-width=".6" opacity=".6"/>
+    </g>
+    <g stroke="#F4F0E7" opacity=".3" stroke-width="1" stroke-linecap="round">
+      <path d="M140 180h220M140 210h220M140 240h180M140 270h220M140 300h150"/>
+      <path d="M140 360h220M140 390h180M140 420h220"/>
+    </g>
+    <circle cx="340" cy="470" r="46" fill="none" stroke="#B69A62" stroke-width="1.4" opacity=".8"/>
+    <circle cx="340" cy="470" r="32" fill="none" stroke="#B69A62" stroke-width=".8" opacity=".5"/>
+    <circle cx="340" cy="470" r="5" fill="#B69A62" opacity=".9"/>
+    <g stroke="#F4F0E7" opacity=".12" stroke-width=".6">
+      <path d="M0 60h500M0 560h500M60 0v620M440 0v620"/>
+    </g>
+  </svg>`;
+}
+
+function svgPattern(){
+  return `<svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="الگوی هندسی انتزاعی">
+    <defs>
+      <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#101D30"/><stop offset="100%" stop-color="#182A44"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#pg1)"/>
+    <g stroke="#B69A62" fill="none" opacity=".35">
+      <circle cx="200" cy="250" r="140" stroke-width="1"/>
+      <circle cx="200" cy="250" r="100" stroke-width=".7"/>
+      <circle cx="200" cy="250" r="60" stroke-width=".5"/>
+      <circle cx="600" cy="180" r="120" stroke-width="1"/>
+      <circle cx="600" cy="180" r="80" stroke-width=".7"/>
+    </g>
+    <g stroke="#F4F0E7" opacity=".1" stroke-width=".8">
+      <path d="M0 400 L800 100M0 450 L800 150"/>
+    </g>
+    <g fill="#B69A62" opacity=".5">
+      <circle cx="400" cy="250" r="3"/><circle cx="200" cy="250" r="2"/>
+      <circle cx="600" cy="180" r="2"/>
+    </g>
+  </svg>`;
+}
+
+function svgAnnounce(){
+  return `<svg viewBox="0 0 900 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ترکیب هندسی انتزاعی">
+    <defs>
+      <linearGradient id="ag1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#182A44"/><stop offset="100%" stop-color="#0B1523"/>
+      </linearGradient>
+    </defs>
+    <rect width="900" height="400" fill="url(#ag1)"/>
+    <g stroke="#B69A62" fill="none" opacity=".4">
+      <path d="M0 300 Q225 180 450 300 T900 300" stroke-width="1.2"/>
+      <path d="M0 340 Q225 220 450 340 T900 340" stroke-width=".8" opacity=".6"/>
+    </g>
+    <g stroke="#F4F0E7" opacity=".12" stroke-width=".8">
+      <path d="M150 0v400M300 0v400M450 0v400M600 0v400M750 0v400"/>
+    </g>
+    <circle cx="450" cy="200" r="70" fill="none" stroke="#B69A62" stroke-width="1" opacity=".5"/>
+    <circle cx="450" cy="200" r="4" fill="#B69A62" opacity=".8"/>
+  </svg>`;
+}
+
+/* =========================================================
+   NAVIGATION DATA
+   ========================================================= */
+const NAV_GROUPS = {
+  office:{
+    title:'دفتر',
+    blurb:'درباره نقش، دامنه و اطلاعات این دفتر اسناد رسمی.',
+    links:[
+      {t:'خانه',d:'نمای کلی وب‌سایت و مسیرهای اصلی',h:'#/'},
+      {t:'درباره دفتر',d:'نقش، دامنه و اصول کار دفتر',h:'#/about'},
+      {t:'اطلاعات دفتر',d:'نشانی، تماس و ساعات کاری',h:'#/info'},
+      {t:'پیش از مراجعه',d:'راهنمای آماده‌سازی پیش از حضور',h:'#/before-visit'},
+      {t:'پرسش‌های متداول',d:'پاسخ‌های عمومی به پرسش‌های رایج',h:'#/faq'},
+      {t:'تماس و نشانی',d:'راه‌های ارتباطی و موقعیت دفتر',h:'#/contact'}
+    ]
+  },
+  services:{
+    title:'خدمات',
+    blurb:'دسته‌بندی اطلاعاتی خدمات، برای یافتن موضوع مرتبط با شرایط شما.',
+    links:[
+      {t:'همه خدمات',d:'نمای کلی دسته‌بندی‌ها و جست‌وجو',h:'#/services'},
+      ...SERVICES.map(s=>({t:s.title,d:s.short,h:'#/services/'+s.slug}))
+    ]
+  },
+  knowledge:{
+    title:'مرکز دانش',
+    blurb:'مقالات، راهنماها و واژه‌نامه برای درک بهتر مسیر تنظیم اسناد.',
+    links:[
+      {t:'مرکز دانش',d:'کتابخانهٔ مقالات و راهنماها',h:'#/knowledge'},
+      {t:'پیش از مراجعه',d:'چک‌لیست و راهنمای آماده‌سازی',h:'#/before-visit'},
+      {t:'مدارک مورد نیاز',d:'راهنمای عمومی مدارک',h:'#/knowledge/required-documents-guide'},
+      {t:'واژه‌نامه اصطلاحات',d:'اصطلاحات رایج دفتر اسناد رسمی',h:'#/knowledge/notary-terms'},
+      {t:'اشتباهات رایج',d:'پرهیز از اشتباهات تکرارشونده',h:'#/knowledge/common-mistakes'},
+      {t:'اطلاعیه‌ها',d:'اطلاع‌رسانی‌ها و به‌روزرسانی‌ها',h:'#/announcements'}
+    ]
+  }
+};
+
+/* =========================================================
+   BUILD MEGA MENU
+   ========================================================= */
+function buildMega(){
+  const inner = $('#megaInner');
+  let html = '';
+  Object.entries(NAV_GROUPS).forEach(([key,g])=>{
+    const links = g.links.map(l=>`
+      <a class="mega-item" href="${l.h}">
+        <span class="mi-title">${esc(l.t)}</span>
+        <span class="mi-desc">${esc(l.d)}</span>
+      </a>`).join('');
+    html += `<div class="mega-panel" data-panel="${key}" hidden>
+      <div class="mega-inner">
+        <div class="mega-aside">
+          <div>
+            <h4>${esc(g.title)}</h4>
+            <p>${esc(g.blurb)}</p>
+          </div>
+          <a class="aside-link" href="${g.links[0].h}">مشاهدهٔ همه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="mega-links">${links}</div>
+      </div>
+    </div>`;
+  });
+  inner.innerHTML = html;
+}
+
+function openMega(key){
+  const mega = $('#mega');
+  $$('.mega-panel').forEach(p=>p.hidden = p.dataset.panel !== key);
+  mega.classList.add('open');
+  $$('[data-mega]').forEach(b=>b.setAttribute('aria-expanded', b.dataset.mega===key ? 'true':'false'));
+}
+function closeMega(){
+  $('#mega').classList.remove('open');
+  $$('[data-mega]').forEach(b=>b.setAttribute('aria-expanded','false'));
+}
+
+/* =========================================================
+   BUILD MOBILE DRAWER
+   ========================================================= */
+function buildDrawer(){
+  const body = $('#drawerBody');
+  let html = `<a class="drawer-single" href="#/">خانه</a>`;
+  Object.entries(NAV_GROUPS).forEach(([key,g])=>{
+    const links = g.links.map(l=>`<a href="${l.h}">${esc(l.t)}</a>`).join('');
+    html += `<div class="drawer-group">
+      <button class="drawer-toggle" data-drawer="${key}" aria-expanded="false">
+        ${esc(g.title)}
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="drawer-panel" id="dp-${key}">${links}</div>
+    </div>`;
+  });
+  html += `<a class="drawer-single" href="#/announcements">اطلاعیه‌ها</a>`;
+  html += `<a class="drawer-single" href="#/contact">تماس و نشانی</a>`;
+  html += `<div class="drawer-foot">
+    <a class="btn btn-gold" href="#/services">مشاهدهٔ خدمات</a>
+    <a class="btn btn-ghost-ivory" href="#/before-visit">آماده‌سازی پیش از مراجعه</a>
+  </div>`;
+  body.innerHTML = html;
+
+  $$('.drawer-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const open = btn.getAttribute('aria-expanded')==='true';
+      const panel = $('#dp-'+btn.dataset.drawer);
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.style.maxHeight = open ? '0px' : panel.scrollHeight+'px';
+    });
+  });
+}
+
+/* =========================================================
+   SEARCH INDEX
+   ========================================================= */
+function buildSearchIndex(){
+  const idx = [];
+  // static pages
+  const pages = [
+    {t:'خانه',d:'صفحهٔ اصلی وب‌سایت',h:'#/',type:'صفحه'},
+    {t:'درباره دفتر',d:'نقش و دامنهٔ کار دفتر اسناد رسمی',h:'#/about',type:'صفحه'},
+    {t:'اطلاعات دفتر',d:'نشانی، تماس و ساعات کاری',h:'#/info',type:'صفحه'},
+    {t:'خدمات',d:'فهرست دسته‌بندی خدمات',h:'#/services',type:'صفحه'},
+    {t:'مرکز دانش',d:'کتابخانهٔ مقالات و راهنماها',h:'#/knowledge',type:'صفحه'},
+    {t:'پیش از مراجعه',d:'راهنمای آماده‌سازی',h:'#/before-visit',type:'صفحه'},
+    {t:'اطلاعیه‌ها',d:'اطلاع‌رسانی‌ها و به‌روزرسانی‌ها',h:'#/announcements',type:'صفحه'},
+    {t:'پرسش‌های متداول',d:'پاسخ‌های عمومی به پرسش‌های رایج',h:'#/faq',type:'صفحه'},
+    {t:'تماس',d:'راه‌های ارتباطی',h:'#/contact',type:'صفحه'}
+  ];
+  pages.forEach(p=>idx.push(p));
+  SERVICES.forEach(s=>idx.push({t:s.title,d:s.short,h:'#/services/'+s.slug,type:'خدمت'}));
+  ARTICLES.forEach(a=>idx.push({t:a.title,d:a.excerpt,h:'#/knowledge/'+a.slug,type:'مقاله'}));
+  ANNOUNCEMENTS.forEach(a=>idx.push({t:a.title,d:a.excerpt,h:'#/announcements/'+a.slug,type:'اطلاعیه'}));
+  FAQS.forEach(f=>idx.push({t:f.q,d:f.a.slice(0,120)+'…',h:'#/faq',type:'پرسش'}));
+  return idx;
+}
+const SEARCH_INDEX = buildSearchIndex();
+
+function runSearch(q){
+  if(!q || q.trim().length<2) return [];
+  const terms = q.trim().toLowerCase().split(/\s+/);
+  return SEARCH_INDEX.filter(item=>{
+    const hay = (item.t+' '+item.d).toLowerCase();
+    return terms.every(t=>hay.includes(t));
+  }).slice(0,20);
+}
+
+/* =========================================================
+   RENDER: SHARED COMPONENTS
+   ========================================================= */
+function pageHead({crumbs, title, lead}){
+  const cr = crumbs.map((c,i)=>{
+    const last = i===crumbs.length-1;
+    return last
+      ? `<span class="cur">${esc(c.t)}</span>`
+      : `<a href="${c.h}">${esc(c.t)}</a>${I.chevron}`;
+  }).join('');
+  return `<section class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">${cr}</nav>
+      <h1>${esc(title)}</h1>
+      ${lead?`<p class="page-lead">${lead}</p>`:''}
+    </div>
+  </section>`;
+}
+
+function serviceCard(s,i){
+  return `<a class="svc-card reveal" href="#/services/${s.slug}">
+    <span class="svc-idx">${String(i+1).padStart(2,'0')}</span>
+    <span class="svc-icon">${ICONS[s.icon]}</span>
+    <h3>${esc(s.title)}</h3>
+    <p>${esc(s.short)}</p>
+    <span class="svc-more">مشاهدهٔ راهنما ${I.arrowLeft}</span>
+  </a>`;
+}
+
+function articleCard(a){
+  const rt = readTime(a.body);
+  return `<article class="kn-item reveal">
+    <span class="kn-tag">${esc(a.category)}</span>
+    <h4><a href="#/knowledge/${a.slug}">${esc(a.title)}</a></h4>
+    <p>${esc(a.excerpt)}</p>
+    <div class="kn-meta">
+      <span>${esc(a.date)}</span>
+      ${rt?`<span class="sep"></span><span>${rt} دقیقه مطالعه</span>`:''}
+    </div>
+  </article>`;
+}
+
+function announcementItem(a){
+  return `<article class="ann-item reveal">
+    <div class="ann-date">
+      <span class="ad-day">${esc(a.date.split('/').pop())}</span>
+      <span class="ad-month">${esc(a.date)}</span>
+    </div>
+    <div>
+      <span class="ann-cat">${esc(a.category)}</span>
+      <h3><a href="#/announcements/${a.slug}">${esc(a.title)}</a></h3>
+      <p>${esc(a.excerpt)}</p>
+    </div>
+    <span class="ann-arrow">${I.arrowRight}</span>
+  </article>`;
+}
+
+function faqItem(f,i){
+  return `<div class="faq-item">
+    <button class="faq-q" aria-expanded="false" aria-controls="fa-${i}">
+      <span class="fq-idx">${String(i+1).padStart(2,'0')}</span>
+      <span class="fq-txt">${esc(f.q)}</span>
+      <span class="fq-icon">${I.plus}</span>
+    </button>
+    <div class="faq-a" id="fa-${i}"><div class="faq-a-inner"><p>${esc(f.a)}</p></div></div>
+  </div>`;
+}
+
+/* =========================================================
+   PAGE: HOME
+   ========================================================= */
+function renderHome(){
+  const featured = SERVICES[0];
+  const rest = SERVICES.slice(1,6);
+  const articles = ARTICLES.slice(0,4);
+  const faqs = FAQS.slice(0,5);
+
+  return `
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap" style="padding:0">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">دفتر اسناد رسمی — بندر امام خمینی، خوزستان</span>
+          <h1 class="h-display">دقت در هر واژه،<br><em>اطمینان</em> در هر سند.</h1>
+          <p class="hero-sub">
+            این وب‌سایت برای روشن‌تر شدن مسیر مراجعه به دفتر اسناد رسمی طراحی شده است:
+            از شناخت دسته‌بندی خدمات و مدارک عمومی، تا آماده‌سازی پیش از حضور و پرسش‌های متداول.
+            اطلاعات مندرج جنبهٔ راهنما دارد و تعیین‌کنندهٔ شرایط هر موضوع نیست.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#/services">
+              مشاهدهٔ خدمات
+              ${I.arrowLeft}
+            </a>
+            <a class="btn btn-outline" href="#/before-visit">
+              آماده‌سازی پیش از مراجعه
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <div class="hm-num">۰۱</div>
+              <div class="hm-lbl">دسته‌بندی اطلاعاتی خدمات</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hm-num">۰۲</div>
+              <div class="hm-lbl">راهنمای آماده‌سازی مدارک</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hm-num">۰۳</div>
+              <div class="hm-lbl">مرکز دانش و مقالات</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          ${svgHero()}
+          <div class="hero-caption">ترکیب هندسی انتزاعی — الهام‌گرفته از قوس، ستون و خطوط معماری</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- INSTITUTIONAL INTRODUCTION -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="split-body reveal">
+        <span class="eyebrow">دربارهٔ این دفتر</span>
+        <h2 class="h2">دفتر اسناد رسمی؛ نهادی برای ثبت دقیق و ماندگار توافق‌ها.</h2>
+        <p class="muted">
+          دفتر اسناد رسمی محل تنظیم و ثبت رسمی اسناد است. کارکرد اصلی این نهاد، تبدیل توافق‌ها و اقرارها
+          به سندی روشن، دقیق و قابل استناد است. در این مسیر، دقت در واژگان، شفافیت در موضوع و رعایت
+          تشریفات، اهمیت بنیادین دارد.
+        </p>
+        <p class="muted">
+          این وب‌سایت برای این طراحی شده است که مراجعان پیش از حضور، تصویری روشن از دسته‌بندی موضوعات،
+          مدارک عمومی و پرسش‌های کلیدی داشته باشند. اطلاعات اختصاصی دفتر — از قبیل نشانی، شماره تماس
+          و ساعات کاری — در بخش «اطلاعات دفتر» نمایش داده می‌شود.
+        </p>
+        <ul class="split-list">
+          <li><span class="num">۰۱</span><span class="txt"><strong>روشنی موضوع</strong>پیش از هر اقدام، موضوع سند باید در یک جملهٔ روشن قابل بیان باشد.</span></li>
+          <li><span class="num">۰۲</span><span class="txt"><strong>دقت در مدارک</strong>اعتبار و به‌روز بودن مدارک، مسیر تنظیم سند را کوتاه‌تر می‌کند.</span></li>
+          <li><span class="num">۰۳</span><span class="txt"><strong>هماهنگی پیش از مراجعه</strong>یک تماس کوتاه پیش از حضور، از رفت‌وآمد اضافی جلوگیری می‌کند.</span></li>
+        </ul>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="#/about">دربارهٔ دفتر</a>
+          <a class="btn btn-outline btn-sm" href="#/info">اطلاعات دفتر</a>
+        </div>
+      </div>
+      <div class="split-visual reveal">
+        <div class="frame">${svgDocument()}</div>
+        <span class="badge">مهر و سند — ترکیب انتزاعی</span>
+        <span class="accent"></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">خدمات</span>
+          <h2 class="h2">دسته‌بندی اطلاعاتی خدمات دفتر</h2>
+          <p>این دسته‌بندی‌ها برای جهت‌یابی اولیه طراحی شده‌اند. امکان‌پذیری هر موضوع، بسته به ماهیت آن و مقررات جاری تعیین می‌شود و دسته‌بندی‌ها به‌معنای در دسترس بودن همهٔ آن‌ها در همهٔ شرایط نیست.</p>
+        </div>
+        <a class="sh-link reveal" href="#/services">مشاهدهٔ همهٔ خدمات ${I.arrowLeft}</a>
+      </div>
+      <div class="svc-grid">
+        <a class="svc-card feature reveal" href="#/services/${featured.slug}">
+          <span class="svc-idx">۰۱ — ویژه</span>
+          <span class="svc-icon">${ICONS[featured.icon]}</span>
+          <div class="fc-body">
+            <h3>${esc(featured.title)}</h3>
+            <p>${esc(featured.short)}</p>
+          </div>
+          <span class="svc-more">راهنمای این دسته ${I.arrowLeft}</span>
+        </a>
+        ${rest.map((s,i)=>serviceCard(s,i+1)).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE YOUR VISIT -->
+  <section class="section before-visit">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">Before Your Visit</span>
+          <h2 class="h2">پیش از مراجعه، چه کارهایی انجام دهیم؟</h2>
+          <p>آماده‌سازی درست، مسیر تنظیم سند را کوتاه‌تر و شفاف‌تر می‌کند. در ادامه، پنج گام عمومی آمده است. توجه داشته باشید که الزامات هر موضوع، بسته به ماهیت آن و شرایط فردی، متفاوت است.</p>
+        </div>
+        <a class="sh-link reveal" href="#/before-visit" style="color:var(--gold);border-color:var(--gold)">راهنمای کامل ${I.arrowLeft}</a>
+      </div>
+      <div class="bv-grid stagger">
+        <div class="bv-item">
+          <div class="bv-num">01</div>
+          <h4>بررسی الزامات موضوع</h4>
+          <p>موضوع مورد نظر را در یک یا دو جملهٔ روشن خلاصه کنید و مشخص کنید چه هدفی دارید.</p>
+        </div>
+        <div class="bv-item">
+          <div class="bv-num">02</div>
+          <h4>تعیین مدارک احتمالی</h4>
+          <p>فهرستی از مدارک موجود تهیه کنید. در این مرحله، کامل بودن همهٔ مدارک لازم نیست.</p>
+        </div>
+        <div class="bv-item">
+          <div class="bv-num">03</div>
+          <h4>هماهنگی جزئیات با دفتر</h4>
+          <p>پیش از مراجعه، موضوع را با دفتر در میان بگذارید تا از مدارک لازم آگاه شوید.</p>
+        </div>
+        <div class="bv-item">
+          <div class="bv-num">04</div>
+          <h4>مرور دستورالعمل‌های مرتبط</h4>
+          <p>در صورت وجود دستورالعمل یا اطلاعیهٔ مرتبط با موضوع، آن را بررسی کنید.</p>
+        </div>
+        <div class="bv-item">
+          <div class="bv-num">05</div>
+          <h4>تماس در صورت ابهام</h4>
+          <p>اگر موضوعی برای شما روشن نیست، پیش از حضور با دفتر تماس بگیرید.</p>
+        </div>
+      </div>
+      <div class="bv-note reveal">
+        ${I.info}
+        <span>الزامات هر موضوع، بسته به ماهیت آن و مقررات جاری، متفاوت است. آنچه در این بخش آمده، یک چارچوب عمومی است و جایگزین راهنمایی اختصاصی دفتر نیست.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE CENTER -->
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">مرکز دانش</span>
+          <h2 class="h2">مقالات، راهنماها و واژه‌نامه</h2>
+          <p>مجموعه‌ای از نوشتارهای عمومی دربارهٔ آماده‌سازی، مدارک، اصطلاحات رایج و اشتباهات تکرارشونده — برای درک بهتر مسیر تنظیم اسناد.</p>
+        </div>
+        <a class="sh-link reveal" href="#/knowledge">ورود به مرکز دانش ${I.arrowLeft}</a>
+      </div>
+      <div class="kn-layout reveal">
+        <div class="kn-feature">
+          <div class="kf-visual">${svgPattern()}</div>
+          <span class="kn-tag">${esc(ARTICLES[0].category)}</span>
+          <h3><a href="#/knowledge/${ARTICLES[0].slug}">${esc(ARTICLES[0].title)}</a></h3>
+          <p>${esc(ARTICLES[0].excerpt)}</p>
+          <div class="kn-meta">
+            <span>${esc(ARTICLES[0].date)}</span>
+            <span class="sep"></span>
+            <span>${readTime(ARTICLES[0].body)} دقیقه مطالعه</span>
+          </div>
+        </div>
+        <div class="kn-list">
+          ${articles.slice(1).map(articleCard).join('')}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section-tight trust">
+    <div class="wrap">
+      <div class="trust-grid stagger">
+        <div class="trust-item">
+          <span class="trust-icon">${I.eye}</span>
+          <h4>شفافیت در اطلاعات</h4>
+          <p>اطلاعات عمومی دفتر و دسته‌بندی خدمات به‌صورت روشن ارائه شده است تا مسیر مراجعه ساده‌تر شود.</p>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">${I.scale}</span>
+          <h4>دقت در بیان</h4>
+          <p>محتوای وب‌سایت از ارائهٔ ادعاهای قطعی دربارهٔ شرایط هر موضوع پرهیز می‌کند و بر راهنمایی عمومی تمرکز دارد.</p>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">${I.shield}</span>
+          <h4>احترام به شرایط فردی</h4>
+          <p>هر موضوع، شرایط خاص خود را دارد. اطلاعات این سایت جایگزین بررسی اختصاصی نیست.</p>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">${I.layers}</span>
+          <h4>ساختار روشن</h4>
+          <p>دسته‌بندی خدمات، راهنماها و مقالات در ساختاری یکپارچه سازماندهی شده‌اند.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">پرسش‌های متداول</span>
+          <h2 class="h2">پاسخ‌های عمومی به پرسش‌های رایج</h2>
+          <p>این پاسخ‌ها جنبهٔ عمومی دارند. برای موضوعات خاص، پیش از مراجعه با دفتر تماس بگیرید.</p>
+        </div>
+        <a class="sh-link reveal" href="#/faq">همهٔ پرسش‌ها ${I.arrowLeft}</a>
+      </div>
+      <div class="faq-list reveal">
+        ${faqs.map(faqItem).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">تماس و نشانی</span>
+          <h2 class="h2">راه‌های ارتباط با دفتر</h2>
+          <p>اطلاعات تماس و نشانی، در صورت تأیید، در این بخش نمایش داده می‌شود. فیلدهای قابل تنظیم با نشانه‌گذاری مشخص شده‌اند.</p>
+        </div>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>برای هماهنگی یا رفع ابهام، با دفتر تماس بگیرید.</h3>
+          <p>پیش از تماس، موضوع را در یک یا دو جملهٔ روشن خلاصه کنید. این کار به دریافت راهنمایی دقیق‌تر کمک می‌کند.</p>
+          <div class="contact-rows">
+            <div class="contact-row">
+              <span class="cr-icon">${I.pin}</span>
+              <div class="cr-body">
+                <div class="cr-label">Address</div>
+                <div class="cr-value">${CFG.address ? esc(CFG.address) : cfgSpan('نشانی دفتر — قابل تنظیم')} — بندر امام خمینی، خوزستان</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.phone}</span>
+              <div class="cr-body">
+                <div class="cr-label">Telephone</div>
+                <div class="cr-value">${CFG.phone ? `<a href="tel:${esc(CFG.phone)}">${esc(CFG.phone)}</a>` : cfgSpan('شماره تماس — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.clock}</span>
+              <div class="cr-body">
+                <div class="cr-label">Hours</div>
+                <div class="cr-value">${CFG.hours ? esc(CFG.hours) : cfgSpan('ساعات کاری — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.info}</span>
+              <div class="cr-body">
+                <div class="cr-label">Office Number</div>
+                <div class="cr-value">${CFG.officeNumber ? esc(CFG.officeNumber) : cfgSpan('شماره دفتر — قابل تنظیم')}</div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="#/contact">مشاهدهٔ صفحهٔ تماس ${I.arrowLeft}</a>
+        </div>
+        <div class="contact-map">
+          ${svgAnnounce()}
+          <div class="map-overlay">
+            <span class="eyebrow">Location</span>
+            <h4>بندر امام خمینی، خوزستان، ایران</h4>
+            <p>در صورت ثبت نشانی دقیق، پیوند نقشه در صفحهٔ تماس نمایش داده می‌شود.</p>
+            <a class="btn btn-ghost-ivory btn-sm" href="#/contact">جزئیات تماس</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-inner reveal">
+      <span class="eyebrow center" style="justify-content:center">آماده‌سازی</span>
+      <h2>مسیر خود را روشن‌تر آغاز کنید.</h2>
+      <p>پیش از مراجعه، دستهٔ خدماتی مرتبط با موضوع خود را بیابید، راهنمای آماده‌سازی را ببینید و در صورت نیاز با دفتر تماس بگیرید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/services">مشاهدهٔ خدمات</a>
+        <a class="btn btn-ghost-ivory" href="#/before-visit">آماده‌سازی پیش از مراجعه</a>
+        <a class="btn btn-ghost-ivory" href="#/contact">تماس با دفتر</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: ABOUT
+   ========================================================= */
+function renderAbout(){
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'درباره دفتر'}],
+    title:'دربارهٔ دفتر اسناد رسمی',
+    lead:'این صفحه نقش، دامنه و اصول عمومی کار یک دفتر اسناد رسمی را توضیح می‌دهد. اطلاعات اختصاصی دفتر — از قبیل شماره دفتر و سابقه — در صورت تأیید، در بخش «اطلاعات دفتر» نمایش داده می‌شود.'
+  })}
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="split-body reveal">
+        <span class="eyebrow">نقش و دامنه</span>
+        <h2 class="h2">دفتر اسناد رسمی چه می‌کند؟</h2>
+        <p class="muted">
+          دفتر اسناد رسمی، محل تنظیم و ثبت رسمی اسناد است. کارکرد اصلی این نهاد، ثبت دقیق توافق‌ها،
+          اقرارها و تعهدها به‌شکلی است که در آینده قابل استناد و پیگیری باشد. در این مسیر،
+          رعایت تشریفات، دقت در عبارات و شفافیت در موضوع، اهمیت اصلی را دارد.
+        </p>
+        <p class="muted">
+          دامنهٔ موضوعات دفتر گسترده است: از اسناد مرتبط با اموال غیرمنقول و وکالت‌نامه‌ها تا
+          اقرارنامه‌ها، اسناد تجاری و موضوعات مرتبط با ارث. هر دسته، مسیر آماده‌سازی و
+          ملاحظات خاص خود را دارد.
+        </p>
+        <p class="muted">
+          امکان‌پذیری هر موضوع، بسته به ماهیت آن و مقررات جاری تعیین می‌شود. اطلاعات این وب‌سایت
+          جنبهٔ راهنمای عمومی دارد و جایگزین بررسی اختصاصی نیست.
+        </p>
+      </div>
+      <div class="split-visual reveal">
+        <div class="frame">${svgDocument()}</div>
+        <span class="badge">سند و مهر — ترکیب انتزاعی</span>
+        <span class="accent"></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">اصول کار</span>
+          <h2 class="h2">اصولی که مسیر کار را روشن می‌کند</h2>
+          <p>سه اصل عمومی که در تنظیم و ثبت اسناد، مبنای کار قرار می‌گیرد.</p>
+        </div>
+      </div>
+      <div class="trust-grid stagger" style="border:1px solid var(--line);border-radius:4px;overflow:hidden">
+        <div class="trust-item" style="background:var(--white)">
+          <span class="trust-icon">${I.eye}</span>
+          <h4>شفافیت</h4>
+          <p>موضوع سند، دامنهٔ اختیارات و شرایط آن باید برای همهٔ طرفین روشن و صریح باشد.</p>
+        </div>
+        <div class="trust-item" style="background:var(--white)">
+          <span class="trust-icon">${I.scale}</span>
+          <h4>دقت</h4>
+          <p>هر واژه در سند اهمیت دارد. دقت در تنظیم، از ابهام و اختلاف در آینده جلوگیری می‌کند.</p>
+        </div>
+        <div class="trust-item" style="background:var(--white)">
+          <span class="trust-icon">${I.shield}</span>
+          <h4>مسئولیت‌پذیری</h4>
+          <p>ثبت سند، تعهدی ماندگار است. مراجعه‌کننده باید از مفاد سند و آثار آن آگاه باشد.</p>
+        </div>
+        <div class="trust-item" style="background:var(--white)">
+          <span class="trust-icon">${I.layers}</span>
+          <h4>سازمان‌یافتگی</h4>
+          <p>اطلاعات و راهنماها در ساختاری روشن ارائه می‌شوند تا مسیر مراجعه ساده‌تر شود.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">اطلاعات دفتر</span>
+          <h2 class="h2">اطلاعات قابل تنظیم دفتر</h2>
+          <p>اطلاعات اختصاصی دفتر — از قبیل شماره دفتر، نشانی، تلفن و ساعات کاری — در این بخش و در صفحهٔ «اطلاعات دفتر» نمایش داده می‌شود. مواردی که هنوز تأیید نشده‌اند، با نشانه‌گذاری مشخص شده‌اند.</p>
+        </div>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/info">
+          <span class="ci-label">Office</span>
+          <h4>اطلاعات دفتر</h4>
+          <p>نشانی، تلفن، ساعات کاری و شماره دفتر</p>
+        </a>
+        <a class="cross-item" href="#/contact">
+          <span class="ci-label">Contact</span>
+          <h4>تماس و نشانی</h4>
+          <p>راه‌های ارتباطی و موقعیت دفتر</p>
+        </a>
+        <a class="cross-item" href="#/faq">
+          <span class="ci-label">FAQ</span>
+          <h4>پرسش‌های متداول</h4>
+          <p>پاسخ‌های عمومی به پرسش‌های رایج</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>در ادامه، خدمات و راهنماها را ببینید.</h2>
+      <p>دستهٔ مرتبط با موضوع خود را انتخاب کنید یا راهنمای آماده‌سازی پیش از مراجعه را مطالعه کنید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/services">مشاهدهٔ خدمات</a>
+        <a class="btn btn-ghost-ivory" href="#/before-visit">پیش از مراجعه</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: OFFICE INFORMATION
+   ========================================================= */
+function renderInfo(){
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'اطلاعات دفتر'}],
+    title:'اطلاعات دفتر',
+    lead:'این صفحه برای نمایش اطلاعات تأییدشدهٔ دفتر طراحی شده است. مواردی که هنوز تأیید نشده‌اند، با نشانه‌گذاری «قابل تنظیم» مشخص شده‌اند و باید با اطلاعات رسمی تکمیل شوند.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>مشخصات و راه‌های ارتباطی</h3>
+          <p>اطلاعات زیر به‌صورت قابل تنظیم ارائه شده است. برای نمایش اطلاعات رسمی، فیلدهای مربوطه را در تنظیمات سایت تکمیل کنید.</p>
+          <div class="contact-rows">
+            <div class="contact-row">
+              <span class="cr-icon">${I.info}</span>
+              <div class="cr-body">
+                <div class="cr-label">Office Number</div>
+                <div class="cr-value">${CFG.officeNumber ? esc(CFG.officeNumber) : cfgSpan('شماره دفتر — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.pin}</span>
+              <div class="cr-body">
+                <div class="cr-label">Address</div>
+                <div class="cr-value">${CFG.address ? esc(CFG.address) : cfgSpan('نشانی دفتر — قابل تنظیم')}<br>بندر امام خمینی، خوزستان، ایران</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.phone}</span>
+              <div class="cr-body">
+                <div class="cr-label">Telephone</div>
+                <div class="cr-value">${CFG.phone ? `<a href="tel:${esc(CFG.phone)}">${esc(CFG.phone)}</a>` : cfgSpan('شماره تماس — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.clock}</span>
+              <div class="cr-body">
+                <div class="cr-label">Working Hours</div>
+                <div class="cr-value">${CFG.hours ? esc(CFG.hours) : cfgSpan('ساعات کاری — قابل تنظیم')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          ${svgAnnounce()}
+          <div class="map-overlay">
+            <span class="eyebrow">Location</span>
+            <h4>بندر امام خمینی، خوزستان، ایران</h4>
+            <p>در صورت ثبت نشانی دقیق و پیوند نقشه، این بخش به موقعیت مکانی دفتر متصل می‌شود.</p>
+            ${CFG.mapUrl
+              ? `<a class="btn btn-ghost-ivory btn-sm" href="${esc(CFG.mapUrl)}" target="_blank" rel="noopener">مشاهدهٔ نقشه</a>`
+              : `<span class="btn btn-ghost-ivory btn-sm" style="opacity:.7;cursor:default">${cfgSpan('پیوند نقشه — قابل تنظیم')}</span>`}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">راهنما</span>
+          <h2 class="h2">چگونه اطلاعات لازم را دریافت کنیم؟</h2>
+          <p>برای موضوعات خاص، پیش از مراجعه با دفتر تماس بگیرید. برای اطلاع از مدارک عمومی، بخش «پیش از مراجعه» را ببینید.</p>
+        </div>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/before-visit">
+          <span class="ci-label">Prepare</span>
+          <h4>پیش از مراجعه</h4>
+          <p>چک‌لیست و راهنمای آماده‌سازی مدارک</p>
+        </a>
+        <a class="cross-item" href="#/faq">
+          <span class="ci-label">FAQ</span>
+          <h4>پرسش‌های متداول</h4>
+          <p>پاسخ‌های عمومی به پرسش‌های رایج</p>
+        </a>
+        <a class="cross-item" href="#/contact">
+          <span class="ci-label">Contact</span>
+          <h4>تماس</h4>
+          <p>راه‌های ارتباطی و موقعیت دفتر</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: SERVICES DIRECTORY
+   ========================================================= */
+function renderServices(){
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'خدمات'}],
+    title:'فهرست خدمات',
+    lead:'این دسته‌بندی‌ها برای جهت‌یابی اولیه طراحی شده‌اند. برای یافتن دستهٔ مرتبط با موضوع خود، از جست‌وجو یا فیلتر دسته‌ها استفاده کنید.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="filter-bar reveal">
+        <div class="filter-search">
+          ${I.search}
+          <input type="search" id="svcFilter" placeholder="جست‌وجو در دسته‌بندی خدمات…" aria-label="جست‌وجو در خدمات">
+        </div>
+        <div class="filter-chips" id="svcChips">
+          <button class="chip active" data-cat="all">همه</button>
+          ${SERVICES.map(s=>`<button class="chip" data-cat="${s.tag}">${esc(s.tag)}</button>`).join('')}
+        </div>
+      </div>
+      <div class="svc-grid" id="svcGrid">
+        ${SERVICES.map((s,i)=>serviceCard(s,i)).join('')}
+      </div>
+      <div id="svcEmpty" hidden>
+        <div class="empty-state">
+          ${I.search}
+          <h4>نتیجه‌ای یافت نشد</h4>
+          <p>عبارت جست‌وجو یا فیلتر را تغییر دهید. اگر موضوع شما در دسته‌ها جای نمی‌گیرد، به صفحهٔ «سایر خدمات دفترخانه» مراجعه کنید.</p>
+          <a class="btn btn-outline btn-sm" href="#/services/other-services">سایر خدمات دفترخانه</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="bv-note reveal" style="background:var(--ivory-2);border-right-color:var(--gold);color:var(--slate)">
+        ${I.info}
+        <span><strong style="color:var(--navy)">یادآوری:</strong> دسته‌بندی‌های بالا اطلاعاتی هستند و به‌معنای در دسترس بودن همهٔ آن‌ها در همهٔ شرایط نیست. امکان‌پذیری هر موضوع، بسته به ماهیت آن و مقررات جاری تعیین می‌شود. پیش از مراجعه، موضوع را با دفتر هماهنگ کنید.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">پیش از مراجعه</span>
+          <h2 class="h2">آماده‌سازی پیش از حضور</h2>
+          <p>پس از انتخاب دستهٔ مرتبط، راهنمای آماده‌سازی و چک‌لیست عمومی را مطالعه کنید.</p>
+        </div>
+        <a class="sh-link reveal" href="#/before-visit">راهنمای کامل ${I.arrowLeft}</a>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/before-visit">
+          <span class="ci-label">Checklist</span>
+          <h4>چک‌لیست آماده‌سازی</h4>
+          <p>فهرست عمومی مدارک و پرسش‌های کلیدی</p>
+        </a>
+        <a class="cross-item" href="#/knowledge/required-documents-guide">
+          <span class="ci-label">Documents</span>
+          <h4>راهنمای عمومی مدارک</h4>
+          <p>دسته‌های کلی مدارک و نکات مربوطه</p>
+        </a>
+        <a class="cross-item" href="#/faq">
+          <span class="ci-label">FAQ</span>
+          <h4>پرسش‌های متداول</h4>
+          <p>پاسخ به پرسش‌های رایج دربارهٔ آماده‌سازی</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: SERVICE DETAIL
+   ========================================================= */
+function renderServiceDetail(slug){
+  const s = SERVICES.find(x=>x.slug===slug);
+  if(!s) return render404();
+
+  const relatedServices = (s.related||[])
+    .map(r=>SERVICES.find(x=>x.slug===r))
+    .filter(Boolean);
+
+  const relatedArticles = ARTICLES.slice(0,3);
+
+  const docsHtml = s.docs.map(d=>`<li>${esc(d)}</li>`).join('');
+  const stepsHtml = s.steps.map(st=>`
+    <div class="step-item">
+      <div class="st-body">
+        <h4>${esc(st.t)}</h4>
+        <p>${esc(st.d)}</p>
+      </div>
+    </div>`).join('');
+  const qHtml = s.questions.map(q=>`<li>${esc(q)}</li>`).join('');
+
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'خدمات',h:'#/services'},{t:s.title}],
+    title:s.title,
+    lead:esc(s.purpose)
+  })}
+
+  <section class="section">
+    <div class="wrap svc-detail-grid">
+      <div class="prose reveal">
+        <h2>هدف این دسته</h2>
+        <p>${esc(s.purpose)}</p>
+
+        <div class="callout">
+          ${I.info}
+          <p><strong>توجه:</strong> فهرست‌های زیر جنبهٔ عمومی دارند. الزامات هر موضوع، بسته به ماهیت آن و شرایط فردی، متفاوت است و لازم است پیش از مراجعه با دفتر هماهنگ شود.</p>
+        </div>
+
+        <h2>مدارک عمومی که ممکن است لازم باشد</h2>
+        <ul>${docsHtml}</ul>
+
+        <h2>راهنمای گام‌به‌گام آماده‌سازی</h2>
+        <div class="steps-list">${stepsHtml}</div>
+
+        <h2>پرسش‌هایی که بهتر است پیش از مراجعه پاسخ دهید</h2>
+        <ul>${qHtml}</ul>
+
+        <div class="disclaimer-box">
+          ${I.info}
+          <p>این صفحه جنبهٔ راهنمای عمومی دارد و به‌عنوان تعیین شرایط قطعی یا مشاورهٔ حقوقی تلقی نمی‌شود. مرجع نهایی، راهنمایی مستقیم دفتر است.</p>
+        </div>
+      </div>
+
+      <aside class="svc-side reveal">
+        <div class="svc-side-card dark">
+          <h4>برای هماهنگی و رفع ابهام</h4>
+          <p>پیش از مراجعه، موضوع را با دفتر در میان بگذارید تا از مدارک و شرایط لازم آگاه شوید.</p>
+          <a class="btn btn-gold btn-sm" href="#/contact">تماس با دفتر</a>
+        </div>
+
+        <div class="svc-side-card">
+          <h4>دسته‌بندی‌های مرتبط</h4>
+          <div class="svc-side-links">
+            ${relatedServices.map(r=>`<a href="#/services/${r.slug}">${esc(r.title)}</a>`).join('')}
+          </div>
+        </div>
+
+        <div class="svc-side-card">
+          <h4>راهنماهای مرتبط</h4>
+          <div class="svc-side-links">
+            <a href="#/before-visit">پیش از مراجعه</a>
+            <a href="#/knowledge/required-documents-guide">راهنمای عمومی مدارک</a>
+            <a href="#/faq">پرسش‌های متداول</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">مرکز دانش</span>
+          <h2 class="h2">مقالات مرتبط</h2>
+          <p>نوشتارهای عمومی که می‌توانند در درک بهتر مسیر آماده‌سازی کمک کنند.</p>
+        </div>
+        <a class="sh-link reveal" href="#/knowledge">همهٔ مقالات ${I.arrowLeft}</a>
+      </div>
+      <div class="kn-layout reveal">
+        <div class="kn-feature">
+          <div class="kf-visual">${svgPattern()}</div>
+          <span class="kn-tag">${esc(relatedArticles[0].category)}</span>
+          <h3><a href="#/knowledge/${relatedArticles[0].slug}">${esc(relatedArticles[0].title)}</a></h3>
+          <p>${esc(relatedArticles[0].excerpt)}</p>
+          <div class="kn-meta">
+            <span>${esc(relatedArticles[0].date)}</span>
+            <span class="sep"></span>
+            <span>${readTime(relatedArticles[0].body)} دقیقه مطالعه</span>
+          </div>
+        </div>
+        <div class="kn-list">
+          ${relatedArticles.slice(1).map(articleCard).join('')}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>موضوع خود را با دفتر در میان بگذارید.</h2>
+      <p>برای دریافت راهنمایی دربارهٔ مدارک و شرایط خاص موضوع خود، با دفتر تماس بگیرید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/contact">تماس با دفتر</a>
+        <a class="btn btn-ghost-ivory" href="#/services">بازگشت به فهرست خدمات</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: KNOWLEDGE CENTER
+   ========================================================= */
+function renderKnowledge(){
+  const featured = ARTICLES[0];
+  const rest = ARTICLES.slice(1);
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'مرکز دانش'}],
+    title:'مرکز دانش',
+    lead:'کتابخانه‌ای از مقالات، راهنماها و واژه‌نامه‌های عمومی دربارهٔ آماده‌سازی، مدارک و اصطلاحات رایج دفتر اسناد رسمی.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="filter-bar reveal">
+        <div class="filter-search">
+          ${I.search}
+          <input type="search" id="knFilter" placeholder="جست‌وجو در مقالات و راهنماها…" aria-label="جست‌وجو در مقالات">
+        </div>
+        <div class="filter-chips" id="knChips">
+          <button class="chip active" data-cat="all">همه</button>
+          ${[...new Set(ARTICLES.map(a=>a.category))].map(c=>`<button class="chip" data-cat="${c}">${esc(c)}</button>`).join('')}
+        </div>
+      </div>
+
+      <div class="kn-layout reveal" id="knFeatured">
+        <div class="kn-feature">
+          <div class="kf-visual">${svgPattern()}</div>
+          <span class="kn-tag">${esc(featured.category)}</span>
+          <h3><a href="#/knowledge/${featured.slug}">${esc(featured.title)}</a></h3>
+          <p>${esc(featured.excerpt)}</p>
+          <div class="kn-meta">
+            <span>${esc(featured.date)}</span>
+            <span class="sep"></span>
+            <span>${readTime(featured.body)} دقیقه مطالعه</span>
+          </div>
+        </div>
+        <div class="kn-list" id="knList">
+          ${rest.map(articleCard).join('')}
+        </div>
+      </div>
+
+      <div id="knEmpty" hidden>
+        <div class="empty-state">
+          ${I.search}
+          <h4>مقاله‌ای یافت نشد</h4>
+          <p>عبارت جست‌وجو یا فیلتر را تغییر دهید. در صورت نیاز، از بخش «پیش از مراجعه» یا «پرسش‌های متداول» استفاده کنید.</p>
+          <a class="btn btn-outline btn-sm" href="#/before-visit">پیش از مراجعه</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">دسترسی سریع</span>
+          <h2 class="h2">مسیرهای مرتبط</h2>
+        </div>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/before-visit">
+          <span class="ci-label">Prepare</span>
+          <h4>پیش از مراجعه</h4>
+          <p>چک‌لیست و راهنمای آماده‌سازی</p>
+        </a>
+        <a class="cross-item" href="#/faq">
+          <span class="ci-label">FAQ</span>
+          <h4>پرسش‌های متداول</h4>
+          <p>پاسخ‌های عمومی به پرسش‌های رایج</p>
+        </a>
+        <a class="cross-item" href="#/announcements">
+          <span class="ci-label">Updates</span>
+          <h4>اطلاعیه‌ها</h4>
+          <p>اطلاع‌رسانی‌ها و به‌روزرسانی‌ها</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: ARTICLE
+   ========================================================= */
+function renderArticle(slug){
+  const a = ARTICLES.find(x=>x.slug===slug);
+  if(!a) return render404();
+
+  const rt = readTime(a.body);
+  const related = ARTICLES.filter(x=>x.slug!==slug).slice(0,3);
+
+  const bodyHtml = a.body.map(sec=>{
+    let h = '';
+    if(sec.t) h += `<h2>${esc(sec.t)}</h2>`;
+    if(sec.p) h += `<p>${esc(sec.p)}</p>`;
+    if(sec.list) h += `<ul>${sec.list.map(li=>`<li>${esc(li)}</li>`).join('')}</ul>`;
+    return h;
+  }).join('');
+
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'مرکز دانش',h:'#/knowledge'},{t:a.title}],
+    title:a.title,
+    lead:esc(a.excerpt)
+  })}
+
+  <section class="section" style="padding-top:clamp(36px,4vw,56px)">
+    <div class="wrap">
+      <div class="article-head" style="padding-top:0">
+        <div class="kn-meta">
+          <span class="kn-tag">${esc(a.category)}</span>
+          <span class="sep"></span>
+          <span>تاریخ انتشار: ${esc(a.date)}</span>
+          ${rt?`<span class="sep"></span><span>${rt} دقیقه مطالعه</span>`:''}
+        </div>
+      </div>
+
+      <div class="prose reveal" style="margin-top:36px">
+        ${bodyHtml}
+
+        <div class="disclaimer-box">
+          ${I.info}
+          <p>این نوشتار جنبهٔ اطلاع‌رسانی عمومی دارد و به‌عنوان مشاورهٔ حقوقی یا تعیین شرایط قطعی تلقی نمی‌شود. شرایط هر موضوع، بسته به ماهیت آن و مقررات جاری، متفاوت است. برای راهنمایی اختصاصی، با دفتر تماس بگیرید.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">ادامهٔ مطالعه</span>
+          <h2 class="h2">مقالات مرتبط</h2>
+        </div>
+        <a class="sh-link reveal" href="#/knowledge">بازگشت به مرکز دانش ${I.arrowLeft}</a>
+      </div>
+      <div class="kn-layout reveal">
+        <div class="kn-feature">
+          <div class="kf-visual">${svgPattern()}</div>
+          <span class="kn-tag">${esc(related[0].category)}</span>
+          <h3><a href="#/knowledge/${related[0].slug}">${esc(related[0].title)}</a></h3>
+          <p>${esc(related[0].excerpt)}</p>
+          <div class="kn-meta">
+            <span>${esc(related[0].date)}</span>
+            <span class="sep"></span>
+            <span>${readTime(related[0].body)} دقیقه مطالعه</span>
+          </div>
+        </div>
+        <div class="kn-list">
+          ${related.slice(1).map(articleCard).join('')}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>پرسشی دارید که پاسخ آن در این نوشتار نبود؟</h2>
+      <p>برای موضوعات خاص، پیش از مراجعه با دفتر تماس بگیرید تا راهنمایی دقیق‌تری دریافت کنید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/contact">تماس با دفتر</a>
+        <a class="btn btn-ghost-ivory" href="#/faq">پرسش‌های متداول</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: BEFORE YOUR VISIT
+   ========================================================= */
+function renderBeforeVisit(){
+  const checklist = [
+    'موضوع مورد نظر را در یک یا دو جملهٔ روشن خلاصه کنید.',
+    'فهرست اولیه‌ای از مدارک موجود تهیه کنید.',
+    'مشخص کنید چه کسانی طرفین موضوع هستند و آیا همهٔ آنان حاضر خواهند بود.',
+    'در صورت وجود نمایندگی، مدارک مربوطه را آماده کنید.',
+    'از معتبر و به‌روز بودن مدارک هویتی اطمینان حاصل کنید.',
+    'موضوع را با دفتر در میان بگذارید و از مدارک لازم آگاه شوید.',
+    'زمان مناسب برای مراجعه را هماهنگ کنید.',
+    'در صورت وجود ابهام، پیش از حضور سؤال خود را مطرح کنید.'
+  ];
+
+  const serviceGuides = SERVICES.slice(0,6);
+
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'پیش از مراجعه'}],
+    title:'پیش از مراجعه',
+    lead:'این صفحه یک مرکز آماده‌سازی است: چک‌لیست عمومی، راهنمای موضوعی و پرسش‌هایی که بهتر است پیش از حضور در دفتر پاسخ داده شوند.'
+  })}
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="split-body reveal">
+        <span class="eyebrow">چک‌لیست عمومی</span>
+        <h2 class="h2">آماده‌سازی، مسیر را کوتاه‌تر می‌کند.</h2>
+        <p class="muted">
+          آماده‌سازی درست، نه‌فقط زمان مراجعه را کوتاه‌تر می‌کند، بلکه از رفت‌وآمد اضافی نیز
+          جلوگیری می‌کند. چک‌لیست زیر یک چارچوب عمومی است. برای موضوعات خاص، هماهنگی مستقیم
+          با دفتر ضروری است.
+        </p>
+        <p class="muted" style="margin-top:16px">
+          <strong style="color:var(--navy)">توجه:</strong> الزامات هر موضوع، بسته به ماهیت آن و مقررات جاری،
+          متفاوت است. این چک‌لیست جایگزین راهنمایی اختصاصی دفتر نیست.
+        </p>
+      </div>
+      <div class="split-visual reveal">
+        <div class="frame">${svgPattern()}</div>
+        <span class="badge">آماده‌سازی — نمای کلی</span>
+        <span class="accent"></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">Checklist</span>
+          <h2 class="h2">چک‌لیست عمومی آماده‌سازی</h2>
+        </div>
+      </div>
+      <ul class="checklist reveal" id="visitChecklist">
+        ${checklist.map((c,i)=>`<li><span class="chk" role="checkbox" aria-checked="false" tabindex="0" data-chk="${i}"></span><span>${esc(c)}</span></li>`).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">راهنمای موضوعی</span>
+          <h2 class="h2">آماده‌سازی بر اساس دستهٔ موضوع</h2>
+          <p>برای هر دسته، یک راهنمای عمومی تهیه شده است. دستهٔ مرتبط با موضوع خود را انتخاب کنید.</p>
+        </div>
+        <a class="sh-link reveal" href="#/services">همهٔ خدمات ${I.arrowLeft}</a>
+      </div>
+      <div class="cross-links reveal" style="grid-template-columns:repeat(2,1fr)">
+        ${serviceGuides.map(s=>`
+          <a class="cross-item" href="#/services/${s.slug}">
+            <span class="ci-label">${esc(s.tag)}</span>
+            <h4>${esc(s.title)}</h4>
+            <p>${esc(s.short)}</p>
+          </a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">پرسش‌های کلیدی</span>
+          <h2 class="h2">پرسش‌هایی که بهتر است پیش از مراجعه پاسخ دهید</h2>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-1">
+            <span class="fq-idx">۰۱</span>
+            <span class="fq-txt">موضوع دقیقاً چیست و هدف نهایی آن چه چیزی است؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-1"><div class="faq-a-inner"><p>پیش از هر اقدام، موضوع را در یک یا دو جملهٔ روشن خلاصه کنید. هرچه موضوع روشن‌تر باشد، مسیر آماده‌سازی و گفت‌وگو با دفتر دقیق‌تر پیش می‌رود.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-2">
+            <span class="fq-idx">۰۲</span>
+            <span class="fq-txt">چه کسانی طرفین موضوع هستند و آیا همهٔ آنان حاضر خواهند بود؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-2"><div class="faq-a-inner"><p>در بسیاری از موضوعات، حضور همهٔ طرفین یا نمایندگان قانونی آنان لازم است. پیش از مراجعه، مشخص کنید چه کسانی باید حاضر شوند.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-3">
+            <span class="fq-idx">۰۳</span>
+            <span class="fq-txt">آیا شخصی به نمایندگی از دیگری اقدام می‌کند؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-3"><div class="faq-a-inner"><p>در صورت وجود نمایندگی، مدارک مثبِتِ سمت یا وکالت‌نامه باید از پیش آماده باشد. نبود این مدارک، روند را متوقف می‌کند.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-4">
+            <span class="fq-idx">۰۴</span>
+            <span class="fq-txt">آیا مدارک هویتی و موضوعی، معتبر و به‌روز هستند؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-4"><div class="faq-a-inner"><p>مدارک منقضی یا ناخوانا، یکی از رایج‌ترین دلایل توقف کار است. پیش از مراجعه، از معتبر و به‌روز بودن مدارک اطمینان حاصل کنید.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-5">
+            <span class="fq-idx">۰۵</span>
+            <span class="fq-txt">آیا موضوع، نیازمند استعلام یا تأییدیهٔ جداگانه است؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-5"><div class="faq-a-inner"><p>برخی موضوعات، نیازمند استعلام از مراجع مربوطه هستند. پیش از مراجعه، این موضوع را با دفتر در میان بگذارید تا از ترتیب و زمان‌بندی آن آگاه شوید.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="bv-6">
+            <span class="fq-idx">۰۶</span>
+            <span class="fq-txt">در صورت ابهام، چگونه می‌توانم راهنمایی بگیرم؟</span>
+            <span class="fq-icon">${I.plus}</span>
+          </button>
+          <div class="faq-a" id="bv-6"><div class="faq-a-inner"><p>برای رفع ابهام، با دفتر تماس بگیرید یا به صفحهٔ <a href="#/faq">پرسش‌های متداول</a> مراجعه کنید. مرجع نهایی، راهنمایی مستقیم دفتر است.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>آماده‌اید؟ مسیر را ادامه دهید.</h2>
+      <p>دستهٔ مرتبط با موضوع خود را ببینید یا برای هماهنگی با دفتر تماس بگیرید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/services">مشاهدهٔ خدمات</a>
+        <a class="btn btn-ghost-ivory" href="#/contact">تماس با دفتر</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: ANNOUNCEMENTS
+   ========================================================= */
+function renderAnnouncements(){
+  const featured = ANNOUNCEMENTS[0];
+  const rest = ANNOUNCEMENTS.slice(1);
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'اطلاعیه‌ها'}],
+    title:'اطلاعیه‌ها و به‌روزرسانی‌ها',
+    lead:'این بخش برای انتشار اطلاع‌رسانی‌های عمومی دفتر و به‌روزرسانی‌های وب‌سایت طراحی شده است. هیچ اطلاعیه‌ای بدون تأیید مرجع مربوطه منتشر نمی‌شود.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <article class="ann-featured reveal">
+        <span class="ann-cat">${esc(featured.category)} — ویژه</span>
+        <h2><a href="#/announcements/${featured.slug}" style="color:inherit">${esc(featured.title)}</a></h2>
+        <p>${esc(featured.excerpt)}</p>
+        <div class="kn-meta" style="color:rgba(244,240,231,.55);margin-bottom:22px">
+          <span>${esc(featured.date)}</span>
+        </div>
+        <a class="btn btn-gold btn-sm" href="#/announcements/${featured.slug}">مشاهدهٔ اطلاعیه ${I.arrowLeft}</a>
+      </article>
+
+      <div class="ann-list reveal">
+        ${rest.map(announcementItem).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">دسترسی سریع</span>
+          <h2 class="h2">بخش‌های مرتبط</h2>
+        </div>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/knowledge">
+          <span class="ci-label">Knowledge</span>
+          <h4>مرکز دانش</h4>
+          <p>مقالات و راهنماهای عمومی</p>
+        </a>
+        <a class="cross-item" href="#/before-visit">
+          <span class="ci-label">Prepare</span>
+          <h4>پیش از مراجعه</h4>
+          <p>چک‌لیست و راهنمای آماده‌سازی</p>
+        </a>
+        <a class="cross-item" href="#/info">
+          <span class="ci-label">Office</span>
+          <h4>اطلاعات دفتر</h4>
+          <p>نشانی، تماس و ساعات کاری</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: ANNOUNCEMENT DETAIL
+   ========================================================= */
+function renderAnnouncementDetail(slug){
+  const a = ANNOUNCEMENTS.find(x=>x.slug===slug);
+  if(!a) return render404();
+
+  const bodyHtml = a.body.map(sec=>{
+    let h = '';
+    if(sec.t) h += `<h2>${esc(sec.t)}</h2>`;
+    if(sec.p) h += `<p>${esc(sec.p)}</p>`;
+    if(sec.list) h += `<ul>${sec.list.map(li=>`<li>${esc(li)}</li>`).join('')}</ul>`;
+    return h;
+  }).join('');
+
+  const others = ANNOUNCEMENTS.filter(x=>x.slug!==slug);
+
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'اطلاعیه‌ها',h:'#/announcements'},{t:a.title}],
+    title:a.title,
+    lead:esc(a.excerpt)
+  })}
+
+  <section class="section" style="padding-top:clamp(36px,4vw,56px)">
+    <div class="wrap">
+      <div class="kn-meta" style="padding-bottom:22px;border-bottom:1px solid var(--line)">
+        <span class="kn-tag">${esc(a.category)}</span>
+        <span class="sep"></span>
+        <span>${esc(a.date)}</span>
+      </div>
+      <div class="prose reveal" style="margin-top:36px">
+        ${bodyHtml}
+        <div class="disclaimer-box">
+          ${I.info}
+          <p>این اطلاعیه جنبهٔ اطلاع‌رسانی عمومی دارد. در صورت وجود هرگونه ابهام یا نیاز به اطلاعات دقیق‌تر، با دفتر تماس بگیرید.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">اطلاعیه‌های دیگر</span>
+          <h2 class="h2">ادامهٔ اطلاعیه‌ها</h2>
+        </div>
+        <a class="sh-link reveal" href="#/announcements">همهٔ اطلاعیه‌ها ${I.arrowLeft}</a>
+      </div>
+      <div class="ann-list reveal">
+        ${others.map(announcementItem).join('')}
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: FAQ
+   ========================================================= */
+function renderFaq(){
+  const categories = [...new Set(FAQS.map(f=>f.c))];
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'پرسش‌های متداول'}],
+    title:'پرسش‌های متداول',
+    lead:'پاسخ‌های زیر جنبهٔ عمومی دارند. برای موضوعات خاص یا شرایط فردی، پیش از مراجعه با دفتر تماس بگیرید.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="filter-bar reveal">
+        <div class="filter-search">
+          ${I.search}
+          <input type="search" id="faqFilter" placeholder="جست‌وجو در پرسش‌ها…" aria-label="جست‌وجو در پرسش‌های متداول">
+        </div>
+        <div class="filter-chips" id="faqChips">
+          <button class="chip active" data-cat="all">همه</button>
+          ${categories.map(c=>`<button class="chip" data-cat="${c}">${esc(c)}</button>`).join('')}
+        </div>
+      </div>
+      <div class="faq-list" id="faqList">
+        ${FAQS.map(faqItem).join('')}
+      </div>
+      <div id="faqEmpty" hidden>
+        <div class="empty-state">
+          ${I.search}
+          <h4>پرسشی یافت نشد</h4>
+          <p>عبارت جست‌وجو یا فیلتر را تغییر دهید. اگر پرسش شما پاسخ داده نشده، با دفتر تماس بگیرید.</p>
+          <a class="btn btn-outline btn-sm" href="#/contact">تماس با دفتر</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="bv-note reveal" style="background:var(--ivory-2);border-right-color:var(--gold);color:var(--slate)">
+        ${I.info}
+        <span><strong style="color:var(--navy)">توجه:</strong> پاسخ‌های این بخش جنبهٔ عمومی دارند و تعیین‌کنندهٔ شرایط هر موضوع نیستند. برای راهنمایی اختصاصی، با دفتر تماس بگیرید.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>پرسش شما در این فهرست نبود؟</h2>
+      <p>موضوع خود را با دفتر در میان بگذارید تا راهنمایی دقیق‌تری دریافت کنید.</p>
+      <div class="final-cta-actions">
+        <a class="btn btn-gold" href="#/contact">تماس با دفتر</a>
+        <a class="btn btn-ghost-ivory" href="#/before-visit">پیش از مراجعه</a>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: CONTACT
+   ========================================================= */
+function renderContact(){
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'تماس و اطلاعات دفتر'}],
+    title:'تماس و اطلاعات دفتر',
+    lead:'این صفحه برای نمایش اطلاعات تأییدشدهٔ دفتر طراحی شده است. مواردی که هنوز تأیید نشده‌اند، با نشانه‌گذاری مشخص شده‌اند.'
+  })}
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>راه‌های ارتباطی</h3>
+          <p>برای هماهنگی یا رفع ابهام، از راه‌های زیر استفاده کنید. پیش از تماس، موضوع را در یک یا دو جملهٔ روشن خلاصه کنید.</p>
+          <div class="contact-rows">
+            <div class="contact-row">
+              <span class="cr-icon">${I.pin}</span>
+              <div class="cr-body">
+                <div class="cr-label">Address</div>
+                <div class="cr-value">${CFG.address ? esc(CFG.address) : cfgSpan('نشانی دفتر — قابل تنظیم')}<br>بندر امام خمینی، خوزستان، ایران</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.phone}</span>
+              <div class="cr-body">
+                <div class="cr-label">Telephone</div>
+                <div class="cr-value">${CFG.phone ? `<a href="tel:${esc(CFG.phone)}">${esc(CFG.phone)}</a>` : cfgSpan('شماره تماس — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.clock}</span>
+              <div class="cr-body">
+                <div class="cr-label">Working Hours</div>
+                <div class="cr-value">${CFG.hours ? esc(CFG.hours) : cfgSpan('ساعات کاری — قابل تنظیم')}</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="cr-icon">${I.info}</span>
+              <div class="cr-body">
+                <div class="cr-label">Office Number</div>
+                <div class="cr-value">${CFG.officeNumber ? esc(CFG.officeNumber) : cfgSpan('شماره دفتر — قابل تنظیم')}</div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="#/before-visit">آماده‌سازی پیش از مراجعه ${I.arrowLeft}</a>
+        </div>
+        <div class="contact-map">
+          ${svgAnnounce()}
+          <div class="map-overlay">
+            <span class="eyebrow">Location</span>
+            <h4>بندر امام خمینی، خوزستان، ایران</h4>
+            <p>در صورت ثبت نشانی دقیق و پیوند نقشه، این بخش به موقعیت مکانی دفتر متصل می‌شود.</p>
+            ${CFG.mapUrl
+              ? `<a class="btn btn-ghost-ivory btn-sm" href="${esc(CFG.mapUrl)}" target="_blank" rel="noopener">مشاهدهٔ نقشه</a>`
+              : `<span class="btn btn-ghost-ivory btn-sm" style="opacity:.7;cursor:default">${cfgSpan('پیوند نقشه — قابل تنظیم')}</span>`}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-left reveal">
+          <span class="eyebrow">دسترسی سریع</span>
+          <h2 class="h2">مسیرهای مرتبط</h2>
+        </div>
+      </div>
+      <div class="cross-links reveal">
+        <a class="cross-item" href="#/services">
+          <span class="ci-label">Services</span>
+          <h4>فهرست خدمات</h4>
+          <p>دسته‌بندی‌های اطلاعاتی خدمات</p>
+        </a>
+        <a class="cross-item" href="#/before-visit">
+          <span class="ci-label">Prepare</span>
+          <h4>پیش از مراجعه</h4>
+          <p>چک‌لیست و راهنمای آماده‌سازی</p>
+        </a>
+        <a class="cross-item" href="#/faq">
+          <span class="ci-label">FAQ</span>
+          <h4>پرسش‌های متداول</h4>
+          <p>پاسخ‌های عمومی به پرسش‌های رایج</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="bv-note reveal" style="background:var(--ivory-2);border-right-color:var(--gold);color:var(--slate)">
+        ${I.info}
+        <span><strong style="color:var(--navy)">یادآوری:</strong> این وب‌سایت فرم ارسال پیام ندارد. برای تماس، از راه‌های ارتباطی بالا استفاده کنید. اطلاعات مندرج در صورت تأیید، در همین صفحه به‌روزرسانی می‌شود.</span>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: SEARCH RESULTS
+   ========================================================= */
+function renderSearchResults(query){
+  const q = (query||'').trim();
+  const results = q ? runSearch(q) : [];
+
+  let body;
+  if(!q){
+    body = `<div class="empty-state">
+      ${I.search}
+      <h4>عبارت جست‌وجو را وارد کنید</h4>
+      <p>می‌توانید نام خدمت، عنوان مقاله یا موضوع مورد نظر خود را جست‌وجو کنید.</p>
+    </div>`;
+  } else if(results.length===0){
+    body = `<div class="empty-state">
+      ${I.search}
+      <h4>نتیجه‌ای برای «${esc(q)}» یافت نشد</h4>
+      <p>عبارت دیگری را امتحان کنید، یا از مسیرهای زیر برای یافتن موضوع مرتبط استفاده کنید.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+        <a class="btn btn-outline btn-sm" href="#/services">فهرست خدمات</a>
+        <a class="btn btn-outline btn-sm" href="#/knowledge">مرکز دانش</a>
+        <a class="btn btn-outline btn-sm" href="#/faq">پرسش‌های متداول</a>
+      </div>
+    </div>`;
+  } else {
+    body = `<div class="search-results" style="padding:0">
+      ${results.map(r=>`
+        <a class="sr-item" href="${r.h}">
+          <span class="sr-type">${esc(r.type)}</span>
+          <div class="sr-body">
+            <h4>${esc(r.t)}</h4>
+            <p>${esc(r.d)}</p>
+          </div>
+        </a>`).join('')}
+    </div>`;
+  }
+
+  return `
+  ${pageHead({
+    crumbs:[{t:'خانه',h:'#/'},{t:'جست‌وجو'}],
+    title: q ? `نتایج جست‌وجو برای «${esc(q)}»` : 'جست‌وجو',
+    lead: q ? `${results.length} نتیجه یافت شد.` : 'عبارت مورد نظر خود را وارد کنید.'
+  })}
+  <section class="section">
+    <div class="wrap" style="max-width:900px">
+      <div class="filter-bar reveal" style="border-top:none">
+        <form class="filter-search" id="searchPageForm" role="search">
+          ${I.search}
+          <input type="search" id="searchPageInput" value="${esc(q)}" placeholder="جست‌وجو…" aria-label="جست‌وجو">
+        </form>
+      </div>
+      <div class="reveal" style="margin-top:16px">${body}</div>
+    </div>
+  </section>
+  `;
+}
+
+/* =========================================================
+   PAGE: 404
+   ========================================================= */
+function render404(){
+  return `
+  <div class="wrap">
+    <div class="nf-wrap">
+      <div class="nf-code">4<span>0</span>4</div>
+      <h1>صفحه‌ای که به آن مراجعه کرده‌اید یافت نشد.</h1>
+      <p>ممکن است نشانی تغییر کرده باشد یا صفحه حذف شده باشد. از مسیرهای زیر می‌توانید ادامه دهید.</p>
+      <div class="nf-links">
+        <a class="btn btn-primary" href="#/">بازگشت به صفحهٔ اصلی</a>
+        <a class="btn btn-outline" href="#/services">مشاهدهٔ خدمات</a>
+      </div>
+      <div class="nf-suggestions">
+        <h3>مسیرهای پیشنهادی</h3>
+        <div class="nf-sugg-grid">
+          <a class="nf-sugg" href="#/before-visit">
+            <h4>پیش از مراجعه</h4>
+            <p>چک‌لیست و راهنمای آماده‌سازی مدارک</p>
+          </a>
+          <a class="nf-sugg" href="#/knowledge">
+            <h4>مرکز دانش</h4>
+            <p>مقالات و راهنماهای عمومی</p>
+          </a>
+          <a class="nf-sugg" href="#/contact">
+            <h4>تماس با دفتر</h4>
+            <p>راه‌های ارتباطی و اطلاعات دفتر</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+}
+
+/* =========================================================
+   ROUTER
+   ========================================================= */
+function parseHash(){
+  const raw = location.hash.replace(/^#/,'') || '/';
+  const [path, qs] = raw.split('?');
+  const params = new URLSearchParams(qs||'');
+  return { path: path || '/', params };
+}
+
+function renderRoute(){
+  const { path, params } = parseHash();
+  const main = $('#main');
+  const parts = path.split('/').filter(Boolean);
+
+  let html = '';
+  let title = 'دفتر اسناد رسمی — بندر امام خمینی، خوزستان';
+
+  if(parts.length===0)              { html = renderHome(); title = 'خانه — دفتر اسناد رسمی'; }
+  else if(parts[0]==='about')       { html = renderAbout(); title = 'درباره دفتر — دفتر اسناد رسمی'; }
+  else if(parts[0]==='info')        { html = renderInfo(); title = 'اطلاعات دفتر — دفتر اسناد رسمی'; }
+  else if(parts[0]==='services'){
+    if(parts[1]) { html = renderServiceDetail(parts[1]); title = 'خدمات — دفتر اسناد رسمی'; }
+    else         { html = renderServices(); title = 'فهرست خدمات — دفتر اسناد رسمی'; }
+  }
+  else if(parts[0]==='knowledge'){
+    if(parts[1]) { html = renderArticle(parts[1]); title = 'مرکز دانش — دفتر اسناد رسمی'; }
+    else         { html = renderKnowledge(); title = 'مرکز دانش — دفتر اسناد رسمی'; }
+  }
+  else if(parts[0]==='before-visit'){ html = renderBeforeVisit(); title = 'پیش از مراجعه — دفتر اسناد رسمی'; }
+  else if(parts[0]==='announcements'){
+    if(parts[1]) { html = renderAnnouncementDetail(parts[1]); title = 'اطلاعیه‌ها — دفتر اسناد رسمی'; }
+    else         { html = renderAnnouncements(); title = 'اطلاعیه‌ها — دفتر اسناد رسمی'; }
+  }
+  else if(parts[0]==='faq')         { html = renderFaq(); title = 'پرسش‌های متداول — دفتر اسناد رسمی'; }
+  else if(parts[0]==='contact')     { html = renderContact(); title = 'تماس — دفتر اسناد رسمی'; }
+  else if(parts[0]==='search')      { html = renderSearchResults(params.get('q')||''); title = 'جست‌وجو — دفتر اسناد رسمی'; }
+  else                              { html = render404(); title = 'صفحه یافت نشد — دفتر اسناد رسمی'; }
+
+  main.innerHTML = html;
+  document.title = title;
+
+  // update active nav
+  const active = '/' + (parts[0]||'');
+  $$('.nav-link[data-route]').forEach(l=>{
+    l.classList.toggle('active', l.dataset.route === (parts.length===0?'/':active));
+  });
+
+  // close overlays
+  closeMega();
+  closeDrawer();
+  closeSearch();
+
+  // scroll to top on route change (except back/forward with hash)
+  window.scrollTo({top:0, behavior:'auto'});
+
+  // re-init page-specific behaviors
+  initReveal();
+  initAccordions();
+  initFilters();
+  initChecklist();
+  initSearchPageForm();
+}
+
+/* =========================================================
+   REVEAL ON SCROLL
+   ========================================================= */
+let revealObserver;
+function initReveal(){
+  if(revealObserver) revealObserver.disconnect();
+  const els = $$('.reveal, .stagger');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(e=>e.classList.add('in'));
+    return;
+  }
+  revealObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>revealObserver.observe(e));
+}
+
+/* =========================================================
+   ACCORDIONS (delegated, works after route changes)
+   ========================================================= */
+function initAccordions(){
+  // handled via delegation below
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+function initFilters(){
+  // Services filter
+  const svcFilter = $('#svcFilter');
+  const svcChips = $('#svcChips');
+  const svcGrid = $('#svcGrid');
+  const svcEmpty = $('#svcEmpty');
+
+  if(svcFilter && svcGrid){
+    let currentCat = 'all';
+    const apply = ()=>{
+      const q = svcFilter.value.trim().toLowerCase();
+      let visible = 0;
+      $$('.svc-card', svcGrid).forEach(card=>{
+        const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+        const text = card.textContent.toLowerCase();
+        const catMatch = currentCat==='all' || card.dataset.cat===currentCat;
+        const qMatch = !q || text.includes(q);
+        const show = catMatch && qMatch;
+        card.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      if(svcEmpty) svcEmpty.hidden = visible>0;
+      if(svcGrid) svcGrid.style.display = visible>0 ? '' : 'none';
+    };
+    // assign categories
+    $$('.svc-card', svcGrid).forEach((card,i)=>{
+      card.dataset.cat = SERVICES[i]?.tag || '';
+    });
+    svcFilter.addEventListener('input', apply);
+    if(svcChips){
+      svcChips.addEventListener('click', e=>{
+        const btn = e.target.closest('.chip');
+        if(!btn) return;
+        $$('.chip', svcChips).forEach(c=>c.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        apply();
+      });
+    }
+  }
+
+  // Knowledge filter
+  const knFilter = $('#knFilter');
+  const knChips = $('#knChips');
+  const knList = $('#knList');
+  const knFeatured = $('#knFeatured');
+  const knEmpty = $('#knEmpty');
+
+  if(knFilter && knList){
+    let currentCat = 'all';
+    const apply = ()=>{
+      const q = knFilter.value.trim().toLowerCase();
+      let visible = 0;
+      $$('.kn-item', knList).forEach(card=>{
+        const text = card.textContent.toLowerCase();
+        const cat = card.querySelector('.kn-tag')?.textContent || '';
+        const catMatch = currentCat==='all' || cat===currentCat;
+        const qMatch = !q || text.includes(q);
+        const show = catMatch && qMatch;
+        card.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      // featured article visibility
+      const featCat = ARTICLES[0].category;
+      const featMatch = (currentCat==='all' || featCat===currentCat) &&
+                        (!q || ARTICLES[0].title.toLowerCase().includes(q) || ARTICLES[0].excerpt.toLowerCase().includes(q));
+      if(knFeatured) knFeatured.style.display = featMatch ? '' : 'none';
+      if(featMatch) visible++;
+      if(knEmpty) knEmpty.hidden = visible>0;
+    };
+    knFilter.addEventListener('input', apply);
+    if(knChips){
+      knChips.addEventListener('click', e=>{
+        const btn = e.target.closest('.chip');
+        if(!btn) return;
+        $$('.chip', knChips).forEach(c=>c.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        apply();
+      });
+    }
+  }
+
+  // FAQ filter
+  const faqFilter = $('#faqFilter');
+  const faqChips = $('#faqChips');
+  const faqList = $('#faqList');
+  const faqEmpty = $('#faqEmpty');
+
+  if(faqFilter && faqList){
+    let currentCat = 'all';
+    const apply = ()=>{
+      const q = faqFilter.value.trim().toLowerCase();
+      let visible = 0;
+      $$('.faq-item', faqList).forEach(item=>{
+        const text = item.textContent.toLowerCase();
+        const idx = Array.from(faqList.children).indexOf(item);
+        const cat = FAQS[idx]?.c || '';
+        const catMatch = currentCat==='all' || cat===currentCat;
+        const qMatch = !q || text.includes(q);
+        const show = catMatch && qMatch;
+        item.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      if(faqEmpty) faqEmpty.hidden = visible>0;
+      if(faqList) faqList.style.display = visible>0 ? '' : 'none';
+    };
+    faqFilter.addEventListener('input', apply);
+    if(faqChips){
+      faqChips.addEventListener('click', e=>{
+        const btn = e.target.closest('.chip');
+        if(!btn) return;
+        $$('.chip', faqChips).forEach(c=>c.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        apply();
+      });
+    }
+  }
+}
+
+/* =========================================================
+   CHECKLIST (Before Your Visit)
+   ========================================================= */
+function initChecklist(){
+  $$('.checklist .chk').forEach(chk=>{
+    const toggle = ()=>{
+      const on = chk.getAttribute('aria-checked')==='true';
+      chk.setAttribute('aria-checked', String(!on));
+      chk.style.background = !on ? 'var(--gold)' : 'transparent';
+      chk.style.boxShadow = !on ? 'inset 0 0 0 2px var(--gold), inset 0 0 0 8px var(--ivory)' : 'none';
+      const parent = chk.closest('li');
+      if(parent) parent.style.opacity = !on ? '.55' : '1';
+    };
+    chk.addEventListener('click', toggle);
+    chk.addEventListener('keydown', e=>{
+      if(e.key===' ' || e.key==='Enter'){ e.preventDefault(); toggle(); }
+    });
+  });
+}
+
+/* =========================================================
+   SEARCH PAGE FORM
+   ========================================================= */
+function initSearchPageForm(){
+  const form = $('#searchPageForm');
+  if(form){
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const q = $('#searchPageInput').value.trim();
+      location.hash = '#/search?q=' + encodeURIComponent(q);
+    });
+  }
+}
+
+/* =========================================================
+   ACCORDION DELEGATION
+   ========================================================= */
+document.addEventListener('click', e=>{
+  const q = e.target.closest('.faq-q');
+  if(q){
+    const expanded = q.getAttribute('aria-expanded')==='true';
+    const panel = document.getElementById(q.getAttribute('aria-controls'));
+    q.setAttribute('aria-expanded', String(!expanded));
+    if(panel){
+      panel.style.maxHeight = expanded ? '0px' : panel.scrollHeight + 'px';
+    }
+  }
+});
+
+/* =========================================================
+   HEADER / SCROLL
+   ========================================================= */
+function onScroll(){
+  const header = $('#siteHeader');
+  if(window.scrollY > 20) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+
+  const bt = $('#backTop');
+  if(window.scrollY > 500) bt.classList.add('show');
+  else bt.classList.remove('show');
+}
+
+/* =========================================================
+   MEGA MENU EVENTS
+   ========================================================= */
+let megaTimeout;
+function setupMega(){
+  $$('[data-mega]').forEach(btn=>{
+    btn.addEventListener('mouseenter', ()=>{
+      clearTimeout(megaTimeout);
+      openMega(btn.dataset.mega);
+    });
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded')==='true';
+      if(expanded) closeMega(); else openMega(btn.dataset.mega);
+    });
+    btn.addEventListener('focus', ()=>openMega(btn.dataset.mega));
+  });
+
+  const header = $('#siteHeader');
+  header.addEventListener('mouseleave', ()=>{
+    megaTimeout = setTimeout(closeMega, 200);
+  });
+  header.addEventListener('mouseenter', ()=>clearTimeout(megaTimeout));
+
+  // click outside
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('#siteHeader')) closeMega();
+  });
+
+  // keyboard
+  document.addEventListener('keydown', e=>{
+    if(e.key==='Escape'){ closeMega(); closeDrawer(); closeSearch(); }
+  });
+}
+
+/* =========================================================
+   MOBILE DRAWER EVENTS
+   ========================================================= */
+function openDrawer(){
+  const d = $('#drawer');
+  d.classList.add('open');
+  $('#menuOpen').setAttribute('aria-expanded','true');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer(){
+  const d = $('#drawer');
+  if(!d) return;
+  d.classList.remove('open');
+  const m = $('#menuOpen');
+  if(m) m.setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+function setupDrawer(){
+  $('#menuOpen')?.addEventListener('click', openDrawer);
+  $('#menuClose')?.addEventListener('click', closeDrawer);
+  // close on link click
+  $('#drawerBody')?.addEventListener('click', e=>{
+    if(e.target.closest('a')) closeDrawer();
+  });
+  // close on backdrop / route change handled in renderRoute
+}
+
+/* =========================================================
+   SEARCH MODAL
+   ========================================================= */
+let searchFocusIdx = -1;
+function openSearch(){
+  const m = $('#searchModal');
+  m.classList.add('open');
+  const inp = $('#searchInput');
+  inp.value = '';
+  renderSearchResults('');
+  setTimeout(()=>inp.focus(), 80);
+}
+function closeSearch(){
+  $('#searchModal')?.classList.remove('open');
+  searchFocusIdx = -1;
+}
+function renderSearchResults(q){
+  const box = $('#searchResults');
+  if(!box) return;
+  const results = runSearch(q);
+  if(!q || q.trim().length<2){
+    box.innerHTML = `<div class="sr-empty">
+      ${I.search}
+      <h4>جست‌وجو در خدمات، مقالات و راهنماها</h4>
+      <p>نام خدمت، عنوان مقاله یا موضوع مورد نظر خود را بنویسید.</p>
+    </div>`;
+    return;
+  }
+  if(results.length===0){
+    box.innerHTML = `<div class="sr-empty">
+      ${I.search}
+      <h4>نتیجه‌ای یافت نشد</h4>
+      <p>عبارت دیگری را امتحان کنید یا از فهرست خدمات و مرکز دانش استفاده کنید.</p>
+    </div>`;
+    return;
+  }
+  box.innerHTML = results.map((r,i)=>`
+    <a class="sr-item${i===0?' focused':''}" href="${r.h}" data-idx="${i}">
+      <span class="sr-type">${esc(r.type)}</span>
+      <div class="sr-body">
+        <h4>${esc(r.t)}</h4>
+        <p>${esc(r.d)}</p>
+      </div>
+    </a>`).join('');
+  searchFocusIdx = 0;
+}
+function setupSearch(){
+  $('#searchOpen')?.addEventListener('click', openSearch);
+  $('#searchModal')?.addEventListener('click', e=>{
+    if(e.target.id==='searchModal') closeSearch();
+  });
+  $('#searchInput')?.addEventListener('input', e=>{
+    renderSearchResults(e.target.value);
+  });
+  $('#searchInput')?.addEventListener('keydown', e=>{
+    const items = $$('.sr-item');
+    if(e.key==='ArrowDown'){
+      e.preventDefault();
+      if(!items.length) return;
+      searchFocusIdx = Math.min(items.length-1, searchFocusIdx+1);
+      items.forEach((it,i)=>it.classList.toggle('focused', i===searchFocusIdx));
+      items[searchFocusIdx]?.scrollIntoView({block:'nearest'});
+    } else if(e.key==='ArrowUp'){
+      e.preventDefault();
+      if(!items.length) return;
+      searchFocusIdx = Math.max(0, searchFocusIdx-1);
+      items.forEach((it,i)=>it.classList.toggle('focused', i===searchFocusIdx));
+      items[searchFocusIdx]?.scrollIntoView({block:'nearest'});
+    } else if(e.key==='Enter'){
+      e.preventDefault();
+      if(items[searchFocusIdx]) location.hash = items[searchFocusIdx].getAttribute('href');
+      else {
+        const q = $('#searchInput').value.trim();
+        if(q) location.hash = '#/search?q='+encodeURIComponent(q);
+        closeSearch();
+      }
+    }
+  });
+}
+
+/* =========================================================
+   BACK TO TOP / LANGUAGE TOGGLE
+   ========================================================= */
+function setupMisc(){
+  $('#backTop')?.addEventListener('click', ()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  $$('.lang-toggle button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      $$('.lang-toggle button').forEach(b=>b.setAttribute('aria-pressed','false'));
+      btn.setAttribute('aria-pressed','true');
+    });
+  });
+}
+
+/* =========================================================
+   HASH ROUTER EVENTS
+   ========================================================= */
+window.addEventListener('hashchange', renderRoute);
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* =========================================================
+   INIT
+   ========================================================= */
+(function init(){
+  $('#yr').textContent = new Date().getFullYear();
+  buildMega();
+  buildDrawer();
+  setupMega();
+  setupDrawer();
+  setupSearch();
+  setupMisc();
+
+  if(!location.hash) location.hash = '#/';
+  renderRoute();
+  onScroll();
+})();
+</script>
+</body>
+</html>
